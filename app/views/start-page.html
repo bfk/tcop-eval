@@ -1,0 +1,84 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Start page example
+{% endblock %}
+
+{% block proposition_header %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block header_class %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  <div class="breadcrumbs">
+    <ol>
+      <li><a href="https://www.gov.uk">Home</a></li>
+      <li><a href="">Technology Code of Practice</a></li>
+      <li>Evaluation Tool</l>
+    </ol>
+  </div>
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <h1 class="heading-xlarge">
+        {% if serviceName %} {{ serviceName }} {% endif %}
+      </h1>
+
+      <p>Use this service to:</p>
+
+      <ul class="list list-bullet">
+        <li>Evaluate a technical platform to determine if it is being developed in accordance with the 
+          <a href="https://www.gov.uk/government/publications/technology-code-of-practice/technology-code-of-practice" title="Tech Code of Practice">Technology Code of Practice</a></li>
+        <li>Create a summary of your Code of Practice analysis that can be shared with others 
+          or start conversations</li>
+        <li>Conduct an internal evaluation of a platform in advance of a 
+          <a href="https://www.gov.uk/service-manual/agile-delivery/spend-controls-check-if-you-need-approval-to-spend-money-on-a-service" title="Spend Control Process">Spend Control</a> 
+          or other assurance process </li>
+      </uL>
+
+      <p>Fully evaluating a programme can take some time, but if you have a solid understanding of the programme 
+        and access to documentation, this self-evaluation tool can be completed in about 10 minutes.</p>
+
+      <p>
+        <a class="button button-start" href="1-define-user-needs" role="button">Start now</a>
+      </p>
+
+      <h2 class="heading-medium">Before you start</h2>
+
+      <p>You will want to have a good knowledge of the details of the technical platform and
+      probably access to project or commercial documentation about it. You might also choose
+      to conduct this evaluation more interactively, through discussion with people working
+      on procuring or developing the platform.</p>
+
+      <p>Assurance teams and others might also use this tool to create a snapshot 
+        of their current view of your platform and to provide recommendations for ongoing improvement.</p>
+
+    </div>
+    <div class="column-third">
+
+      <aside class="govuk-related-items" role="complementary">
+        <h2 class="heading-medium" id="subsection-title">Related Guidance</h2>
+        <nav role="navigation" aria-labelledby="subsection-title">
+          <ul class="font-xsmall">
+            <li><a href="https://www.gov.uk/government/publications/technology-code-of-practice/technology-code-of-practice">Technology Code of Practice</a></li>
+            <li><a href="https://www.gov.uk/government/publications/technology-code-of-practice/technology-code-of-practice-related-guidance">Related Technology Guidance</a></li>
+            <li><a href="https://www.gov.uk/service-manual/service-standard">Government Service Standard</a></li>
+            <li><a href="https://www.gov.uk/service-manual/agile-delivery/spend-controls-check-if-you-need-approval-to-spend-money-on-a-service">Spend Controls</a></li>
+            <li><a href="https://www.gov.uk/service-manual" class="bold-xsmall">More <span class="visuallyhidden">in the Service Manual</span></a></li>
+          </ul>
+        </nav>
+      </aside>
+
+    </div>
+  </div>
+
+</main>
+
+{% endblock %}

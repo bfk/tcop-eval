@@ -1,0 +1,83 @@
+{% extends "layout.html" %} {% block page_title %} 1. Define User Needs {% endblock %} {% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <a class="link-back" href="start-page">Back</a>
+
+      <h1 class="heading-xlarge">
+        Point 1. Define user needs
+      </h1>
+      <p class="body-text">
+        Develop knowledge of your users and what that means for your technology project or programme.
+      </p>
+      <p class="body-text">
+        <a href="https://www.gov.uk/guidance/define-user-needs">Read more about point 1</a>
+      </p>
+
+
+      <!-- Copied from https://govuk-elements.herokuapp.com/form-elements/#form-toggle-content-checkboxes -->
+
+      <form>
+        <div class="form-group">
+          <fieldset>
+
+            <legend>
+              <h1 class="heading-medium">
+                What behaviours have you observed in relation to Point 1?
+              </h1>
+              <span class="body-text">Select all behaviours that you have seen.</span>
+            </legend>
+
+            <div class="multiple-choice">
+              <input id="behaviours-individual-interviews" name="behaviours" type="checkbox" value="individual-interviews">
+              <label for="behaviours-individual-interviews">Conducts individual user interviews, not just presentations/consultations with groups.</label>
+            </div>
+            <div class="multiple-choice">
+              <input id="behaviours-personas" name="behaviours" type="checkbox" value="personas">
+              <label for="behaviours-personas">Has identified user personas or segments, preferably broken down by goal or activity rather than demographics</label>
+            </div>
+            <div class="multiple-choice" data-target="other-behaviour">
+              <input id="behaviours-other" name="behaviours" type="checkbox" value="other-behaviour">
+              <label for="behaviours-other">Other behaviour supporting Point 1</label>
+            </div>
+            <div class="panel panel-border-narrow js-hidden" id="other-behaviour">
+              <label class="form-label" for="behaviours-other-description">Other positive behaviour you have observed</label>
+              <input class="form-control" type="text" id="behaviours-other-description" name="behaviours-other">
+            </div>
+
+          </fieldset>
+        </div>
+
+        <div class="form-group">
+          <input class="button" type="submit" value="Continue to Point 2">
+        </div>
+
+      </form>
+      
+            <h2 class="heading-medium">
+        Consider the following:
+      </h2>
+      <ul class="list list-bullet">
+        <li>Have you carried out user research in the form of multiple interviews or observations of the users?</li>
+        <li>Do you have a thorough knowledge of who your users are?</li>
+        <li>Does your evidence support your understanding of your users’ needs?</li>
+        <li>Can you describe how your service/product reflects the needs of the user?</li>
+      </ul>
+      <h2 class="heading-medium">
+        What good looks like
+      </h2>
+      <p>
+        The team/department have carried out user research in the form of multiple interviews to find out who the user is and what they need. In order to meet all the user’s needs the project or programme will need to employ/assign people with the right range
+        of skills and experience. The team should continue to do user research at key points throughout the project and programme to refine their deliverables and help keep the project or programme on track. At the end of the project or programme it is
+        useful to do a user research round up of the findings in case they can be used by other teams as part of their research.
+      </p>
+
+      
+      
+    </div>
+  </div>
+</main>
+
+{% endblock %}
