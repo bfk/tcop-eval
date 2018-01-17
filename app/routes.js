@@ -12,8 +12,8 @@ router.get('/start-page', function (req, res) {
   res.render('start-page')
 })
 
-router.get('/1-define-user-needs', function (req, res) {
-  res.render('1-define-user-needs', { 'config': config, 'pointnum': 1 })
+router.get('/point/:pointnum', function (req, res) {
+  res.render('point', { 'config': config, 'pointnum': parseInt(req.params.pointnum) })
 })
 
 module.exports = router

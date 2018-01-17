@@ -1,0 +1,114 @@
+{% extends "layout.html" %} {% block page_title %} 1. Define User Needs {% endblock %} {% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <a class="link-back" href="/start-page">Back</a>
+
+      <h1 class="heading-xlarge">
+        Point {{ config.tcop.points[pointnum-1].number }}. {{ config.tcop.points[pointnum-1].title }}
+      </h1>
+      <p class="body-text">
+        {{ config.tcop.points[pointnum-1].summary }}
+      </p>
+      <p class="body-text">
+        <a href="{{ config.tcop.points[pointnum-1].readmore }}" target="_blank">Read more about point {{ config.tcop.points[pointnum-1].number }}</a>
+      </p>
+
+      <details>
+        <summary><span class="summary">Prompts to consider</span></summary>
+        <div class="panel panel-border-narrow">
+          {% for prompt in config.tcop.points[pointnum-1].prompts %}
+          <p>{{ prompt }}</p>
+          {% endfor %}
+        </div>
+      </details>
+
+      <details>
+        <summary><span class="summary">Anti-patterns</span></summary>
+        <div class="panel panel-border-narrow">
+          {% for pattern in config.tcop.points[pointnum-1].antipatterns %}
+          <p>{{ pattern }}</p>
+          {% endfor %}
+        </div>
+      </details>
+
+      <!-- Copied from https://govuk-elements.herokuapp.com/form-elements/#form-toggle-content-checkboxes -->
+
+      <form action="{{ '/point/' + (pointnum+1) if pointnum < config.tcop.points.length else '/tcop-answers'}}" method="post" class="form">
+        <div class="form-group">
+          <fieldset>
+
+            <legend>
+              <h1 class="heading-medium">
+                What team behaviours have you observed in relation to Point 1?
+              </h1>
+              <span class="body-text">Select all behaviours that you have seen.</span>
+            </legend>
+
+            {% for behaviour in config.tcop.points[pointnum-1].teambehaviours %}
+            <div class="multiple-choice">
+              <input id="point{{pointnum}}-teambehaviours-{{behaviour.id}}" name="point{{pointnum}}-teambehaviours" type="checkbox" value="{{behaviour.id}}">
+              <label for="point{{pointnum}}-teambehaviours-{{behaviour.id}}">{{behaviour.description}}</label>
+            </div>
+            {% endfor %}
+
+            <div class="multiple-choice" data-target="other-behaviour">
+              <input id="behaviours-other" name="point-1-behaviours" type="checkbox" value="other-behaviour">
+              <label for="behaviours-other">Other team behaviour supporting Point 1</label>
+            </div>
+            <div class="panel panel-border-narrow js-hidden" id="other-behaviour">
+              <label class="form-label" for="point-1-other-behaviour-description">Other positive team behaviour you have observed</label>
+              <input class="form-control" type="text" id="point-1-other-behaviour-description" name="point-1-other-behaviour-description">
+            </div>
+
+          </fieldset>
+        </div>
+
+        <div class="form-group">
+          <fieldset>
+
+            <legend>
+              <h1 class="heading-medium">Assessment Level</h1>
+            </legend>
+
+            <div class="multiple-choice">
+              <input id="radio-1" type="radio" name="radio-group" value="Assure">
+              <label for="radio-1">Assure</label>
+            </div>
+            <div class="multiple-choice">
+              <input id="radio-2" type="radio" name="radio-group" value="Monitor">
+              <label for="radio-2">Monitor</label>
+            </div>
+            <p class="form-block">or</p>
+            <div class="multiple-choice">
+              <input id="radio-3" type="radio" name="radio-group" value="Control">
+              <label for="radio-3">Control</label>
+            </div>
+
+          </fieldset>
+
+        </div>
+
+        <div class="form-group">
+          <input class="button" type="submit" value="Continue to {{ 'Point ' + (pointnum+1) if pointnum < config.tcop.points.length else 'Summary' }}">
+        </div>
+
+      </form>
+
+            <pre>
+      <div class="code">
+        Length: {{config.tcop.points.length}}
+        Variable pointnum: {{ pointnum }}
+        Title: {{ config.tcop.points[pointnum-1].title }}
+        First behaviour: {{config.tcop.points[0].teambehaviours[0].id }}
+      </div>
+      </pre>
+
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}
