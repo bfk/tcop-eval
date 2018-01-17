@@ -1,0 +1,88 @@
+{"tcop": {
+  "fullname": "Technology Code of Practice",
+  "link": "https://www.gov.uk/government/publications/technology-code-of-practice/technology-code-of-practice",
+  "points": [
+    {
+      "number": 1,
+      "title": "Define user needs",
+      "readmore": "https://www.gov.uk/guidance/define-user-needs",
+      "summary": "Understand your users and their needs. Develop knowledge of your users and what that means for your technology project or programme.",
+      "team-behaviours": [
+        {
+          "id": "individual-interviews",
+          "description": "The team conducts individual user interviews, not just presentations/consultations with groups."
+        },
+        {
+          "id": "personas",
+          "description": "The team has identified user personas or segments, preferably broken down by goal or activity rather than demographics"
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "title": "Make things accessible",
+      "readmore": "https://www.gov.uk/guidance/make-things-accessible",
+      "summary": "Make sure your technology, infrastructure and systems are accessible for users."
+    },
+    {
+      "number": 3,
+      "title": "Be open and use open source",
+      "readmore": "https://www.gov.uk/guidance/be-open-and-use-open-source",
+      "summary": "Publish your code and use open source to improve transparency, flexibility and accountability."
+    },
+    {
+      "number": 4,
+      "title": "Make use of open standards",
+      "readmore": "https://www.gov.uk/guidance/make-use-of-open-standards",
+      "summary": "Build technology that uses open standards to ensure your technology works and communicates with other technology, and can easily be upgraded and expanded."
+    },
+    {
+      "number": 5,
+      "title": "Use cloud first",
+      "readmore": "https://www.gov.uk/guidance/use-cloud-first",
+      "summary": "Use public cloud first as stated in the government’s cloud first policy."
+    },
+    {
+      "number": 6,
+      "title": "Make things secure",
+      "readmore": "https://www.gov.uk/guidance/make-things-secure",
+      "summary": "Keep systems and data safe with the appropriate level of security."
+    },
+    {
+      "number": 7,
+      "title": "Make privacy integral",
+      "readmore": "https://www.gov.uk/guidance/make-privacy-integral",
+      "summary": "Make sure citizens’ rights are protected by integrating privacy as an essential part of your system."
+    },
+    {
+      "number": 8,
+      "title": "Share and reuse technology",
+      "readmore": "https://www.gov.uk/guidance/share-and-reuse-technology",
+      "summary": "Promote good practice and avoid duplicated efforts by sharing and reusing services, data and software components."
+    },
+    {
+      "number": 9,
+      "title": "Integrate and adapt technology",
+      "readmore": "https://www.gov.uk/guidance/integrate-and-adapt-technology",
+      "summary": "Your technology should work with existing technologies, processes and infrastructure in your organisation, and adapt to future demands."
+    },
+    {
+      "number": 10,
+      "title": "Make better use of data",
+      "readmore": "https://www.gov.uk/guidance/make-better-use-of-data",
+      "summary": "Consider how to minimise data collection and reuse data to avoid duplication of datasets."
+    },
+    {
+      "number": 11,
+      "title": "Define your purchasing strategy",
+      "readmore": "https://www.gov.uk/guidance/define-your-purchasing-strategy",
+      "summary": "Your purchasing strategy must show you’ve considered commercial and technology aspects, and contractual limitations."
+    },
+    {
+      "number": 12,
+      "title": "Meet the Digital Service Standard for digital services",
+      "readmore": "https://www.gov.uk/service-manual/service-standard",
+      "summary": "If you are building a service as part of your technology project or programme you will also need to meet the Digital Service Standard."
+    }
+  ]
+}}

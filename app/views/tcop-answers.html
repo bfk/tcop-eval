@@ -1,0 +1,127 @@
+{% extends "layout.html" %} {% block page_title %} Check your answers {% endblock %} {% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <a href="1-define-user-needs" class="link-back">Back</a>
+
+      <h1 class="heading-large">
+        Evaluation Results
+      </h1>
+
+
+      <!-- only add a heading for a list if there is more than one list -->
+      <h2 class="heading-medium">
+        Point 1. Define user needs
+      </h2>
+
+      <!-- use additional modifier class to change column widths for multiple groups of questions and answers: -->
+      <!--   * `cya-questions-short` for short questions -->
+      <!--   * `cya-questions-long` for long questions -->
+      <!--   * none for single group of q&a -->
+      <dl class="govuk-check-your-answers cya-questions-short">
+        <div>
+          <dt class="cya-question">
+          Observed team behaviours
+          </dt>
+          <dd class="cya-answer">
+            <ul>
+              {% for behaviour in data['point-1-behaviours'] %}
+              <li>{{ behaviour }}</li>
+              {% else %}
+              <li>No behaviours selected</li>
+              {% endfor %}
+            </ul>
+          </dd>
+
+          <dt class="cya-question">
+            Other behaviour
+          </dt>
+          <dd class="cya-answer">
+            {{ data['point-1-other-behaviour-description'] }}
+          </dd>
+
+          <dd class="cya-change">
+            <a href="1-define-user-needs">
+              Change<span class="visually-hidden"> Point 1</span>
+            </a>
+          </dd>
+        </div>
+      </dl>
+
+
+      <h2 class="heading-medium">
+        Point 2. Make things accessible
+      </h2>
+
+      <dl class="govuk-check-your-answers cya-questions-short">
+        <div>
+          <dt class="cya-question">
+            Observed behaviours
+          </dt>
+          <dd class="cya-answer">
+            etc.
+          </dd>
+          <dd class="cya-change">
+            <a href="#">
+              Change<span class="visually-hidden"> Point 2</span>
+            </a>
+          </dd>
+        </div>
+      </dl>
+
+      
+            <h2 class="heading-medium">
+        Point 3. Be open and use open source
+      </h2>
+
+      <dl class="govuk-check-your-answers cya-questions-short">
+        <div>
+          <dt class="cya-question">
+            Observed behaviours
+          </dt>
+          <dd class="cya-answer">
+            etc.
+          </dd>
+          <dd class="cya-change">
+            <a href="#">
+              Change<span class="visually-hidden"> Point 2</span>
+            </a>
+          </dd>
+        </div>
+      </dl>
+
+
+
+      <h2 class="heading-medium">Now send your evaluation</h2>
+
+      <!-- Email -->
+
+      <div class="form-group">
+        <label class="form-label" for="email">
+        Email address
+      </label>
+        <input type="text" class="form-control" id="email">
+      </div>
+
+
+      <p class="text">
+        This service does not store any of your evaluation permanently. You must download or send the information if you would like to keep it.
+      </p>
+
+      <div class="form-group">
+
+        <a href="confirmation-page" class="button">Send me a copy of my evaluation</a>
+
+        <p class="body-text">
+          <a href="#">Download my evaluation as a PDF</a>
+        </p>
+
+
+      </div>
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}
