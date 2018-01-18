@@ -1,4 +1,4 @@
-{% extends "layout.html" %} {% block page_title %} Evaluation results {% endblock %} {% block content %}
+{% extends "layout.html" %} {% block page_title %} Evaluation summary {% endblock %} {% block content %}
 
 <main id="content" role="main">
   <div class="grid-row">
@@ -6,8 +6,17 @@
       <a href="/start-page" class="link-back">Back to start</a>
 
       <h1 class="heading-large">
-        Evaluation Results
+        Evaluation Summary
       </h1>
+
+
+      <div class="notice">
+        <i class="icon icon-important"><span class="visually-hidden">Warning</span></i>
+        <strong class="bold-small">
+        This service does not store any of your evaluation permanently. You must download or send the information if you would like to keep it.
+  </strong>
+      </div>
+
 
       {% for point in config.tcop.points %}
       <table>
@@ -17,23 +26,22 @@
             <td colspan=3>
               <div class="data">
                 <span class="data-item bold-large">5/12</span>
-                 <span class="data-item bold-xsmall">Maturity score</span>
+                <span class="data-item bold-xsmall">Maturity score</span>
               </div>
             </td>
           </tr>
           <tr>
-            <td valign="top">Expected team behaviours</td>
+            <td valign="top"><strong>Expected</strong> team behaviours</td>
             <td>&#x2713;&nbsp;Individual user interviews<br /> &#x2713;&nbsp;User personas</td>
             <td>&nbsp;</td>
           </tr>
           <tr>
-            <td valign="top">Strong team behaviours</td>
+            <td valign="top"><strong>Strong</strong> team behaviours</td>
             <td>&nbsp;</td>
-            <td>&#x274C;&nbsp;Prioritised backlog<br />
-            &#x274C;&nbsp;Variety of research methods</td>
+            <td>&#x274C;&nbsp;Prioritised backlog<br /> &#x274C;&nbsp;Variety of research methods</td>
           </tr>
           <tr>
-            <td valign="top">Exceptional team behaviours</td>
+            <td valign="top"><strong>Exceptional</strong> team behaviours</td>
             <td>&#x2713;&nbsp;Requirements changed due to research</td>
             <td>&#x274C;&nbsp;Shared user needs widely</td>
           </tr>
@@ -45,91 +53,6 @@
       </table>
       {% endfor %}
 
-
-
-      <!-- only add a heading for a list if there is more than one list -->
-      <h2 class="heading-medium">
-        Point 1. Define user needs
-      </h2>
-
-      <!-- use additional modifier class to change column widths for multiple groups of questions and answers: -->
-      <!--   * `cya-questions-short` for short questions -->
-      <!--   * `cya-questions-long` for long questions -->
-      <!--   * none for single group of q&a -->
-      <dl class="govuk-check-your-answers cya-questions-short">
-        <div>
-          <dt class="cya-question">
-          Observed team behaviours
-          </dt>
-          <dd class="cya-answer">
-            <ul>
-              {% for behaviour in data['point1-behaviours'] %}
-              <li>{{ behaviour }}</li>
-              {% else %}
-              <li>No behaviours selected</li>
-              {% endfor %}
-            </ul>
-          </dd>
-
-          <dt class="cya-questions-long">
-            Other behaviour
-          </dt>
-          <dd class="cya-answer">
-            {{ data['point1-other-behaviour-description'] }}
-          </dd>
-
-          <dd class="cya-change">
-            <a href="/point/1">
-              Change<span class="visually-hidden"> Point 1</span>
-            </a>
-          </dd>
-        </div>
-      </dl>
-
-
-      <h2 class="heading-medium">
-        Point 2. Make things accessible
-      </h2>
-
-      <dl class="govuk-check-your-answers cya-questions-short">
-        <div>
-          <dt class="cya-question">
-            Observed behaviours
-          </dt>
-          <dd class="cya-answer">
-            etc.
-          </dd>
-          <dd class="cya-change">
-            <a href="#">
-              Change<span class="visually-hidden"> Point 2</span>
-            </a>
-          </dd>
-        </div>
-      </dl>
-
-
-      <h2 class="heading-medium">
-        Point 3. Be open and use open source
-      </h2>
-
-      <dl class="govuk-check-your-answers cya-questions-short">
-        <div>
-          <dt class="cya-question">
-            Observed behaviours
-          </dt>
-          <dd class="cya-answer">
-            etc.
-          </dd>
-          <dd class="cya-change">
-            <a href="#">
-              Change<span class="visually-hidden"> Point 2</span>
-            </a>
-          </dd>
-        </div>
-      </dl>
-
-
-
       <h2 class="heading-medium">Now send your evaluation</h2>
 
       <!-- Email -->
@@ -139,12 +62,12 @@
         Email address
       </label>
         <input type="text" class="form-control" id="email">
+
+        <label class="form-label" for="service-name">Service name (optional)</label>
+        <input class="form-control" id="service-name" type="text" name="service-name">
+
       </div>
 
-
-      <p class="text">
-        This service does not store any of your evaluation permanently. You must download or send the information if you would like to keep it.
-      </p>
 
       <div class="form-group">
 
@@ -153,10 +76,7 @@
         <p class="body-text">
           <a href="#">Download my evaluation as a PDF</a>
         </p>
-
-
       </div>
-
     </div>
   </div>
 </main>

@@ -62,61 +62,146 @@
       "number": 2,
       "title": "Make things accessible",
       "readmore": "https://www.gov.uk/guidance/make-things-accessible",
-      "summary": "Make sure your technology, infrastructure and systems are accessible for users."
+      "summary": "Make sure your technology, infrastructure and systems are accessible for users.",
+      "prompts": [
+        "Have you involved users with a range of impairments in user testing?",
+        "What range of devices do you need to work with your technology?",
+        "Can users access your services in different web browsers?",
+        "Is your service/system compatible with assistive technologies?"
+      ]
     },
     {
       "number": 3,
       "title": "Be open and use open source",
       "readmore": "https://www.gov.uk/guidance/be-open-and-use-open-source",
-      "summary": "Publish your code and use open source to improve transparency, flexibility and accountability."
+      "summary": "Publish your code and use open source to improve transparency, flexibility and accountability.",
+      "prompts": [
+        "What are the solution’s initial and ongoing costs?",
+        "Will the staff need training or will expert users need to be employed to manage the solution?",
+        "If the solution is open source, how widely is the code already adopted? How mature is it?",
+        "Does the solution offer the level of support needed?",
+        "How reliable is the solution? Assess it by looking at its maturity.",
+        "How well does the solution perform? Can you analyse performance data or reviews?",
+        "Is the solution flexible?",
+        "Will the solution work with your other technology?",
+        "Is the solution’s <a href=\"https://opensource.org/licenses\" title=\"Open Source Licenses\" target=\"_blank\">licence</a> acceptable to your organisation’s business requirements?",
+        "Is the solution’s warranty acceptable and is there an option to buy one?"
+      ]
     },
     {
       "number": 4,
       "title": "Make use of open standards",
       "readmore": "https://www.gov.uk/guidance/make-use-of-open-standards",
-      "summary": "Build technology that uses open standards to ensure your technology works and communicates with other technology, and can easily be upgraded and expanded."
+      "summary": "Build technology that uses open standards to ensure your technology works and communicates with other technology, and can easily be upgraded and expanded.",
+      "prompts": [
+        "Have you made use of <a href=\"https://www.gov.uk/government/publications/open-standards-principles/open-standards-principles\" title=\"Open Standards\" target=\"_blank\">open standards</a>, complying with any that are <a href=\"https://www.gov.uk/government/publications/open-standards-for-government\" title=\"Mandatory standards\" target=\"_blank\">compulsory for use in government</a>?",
+        "Are you clear about what data your systems hold?",
+        "What are the identifiers in place to make sure the data can be used effectively?",
+        "How did you establish these identifiers?",
+        "How have you avoided duplication of data?",
+        "Are you clear about your approved source?",
+        "How have you used <a href=\"http://restfulapi.net\" title=\"Rest APIs\" target=\"_blank\">RESTful APIs</a> for integration where possible?",
+        "How have you considered the benefits of flexibility in your technology?"
+      ]
     },
     {
       "number": 5,
       "title": "Use cloud first",
       "readmore": "https://www.gov.uk/guidance/use-cloud-first",
-      "summary": "Use public cloud first as stated in the government’s cloud first policy."
+      "summary": "Use public cloud first as stated in the government’s cloud first policy.",
+      "prompts": [
+        "How have you evaluated potential <a href=\"https://www.gov.uk/guidance/how-to-assess-a-hosting-business-case\" title=\"Assessing a hosting business case\" target=\"_blank\">public cloud services</a> before considering alternatives such as data centres?",
+        "Can you demonstrate that your chosen service represents the best value for money?"
+      ]
     },
     {
       "number": 6,
       "title": "Make things secure",
       "readmore": "https://www.gov.uk/guidance/make-things-secure",
-      "summary": "Keep systems and data safe with the appropriate level of security."
+      "summary": "Keep systems and data safe with the appropriate level of security.",
+      "prompts": [
+        "Have you considered the security risks around your technology and how to mitigate them?",
+        "Should a security risk occur do you have processes in place to improve the time taken to recover?",
+        "Have you followed the principles set out in the <a href=\"https://www.gov.uk/government/publications/security-policy-framework/hmg-security-policy-framework\" title=\"Security policy framework\" target=\"_blank\">Security policy framework</a> and <a href=\"https://www.gov.uk/government/publications/government-security-classifications\" title=\"Security classifications\" target=\"_blank\">Security classification policy</a>?",
+        "Have you followed the National Cyber Security Centre’s <a href=\"https://www.ncsc.gov.uk/guidance/risk-management-collection\" title=\"Information risk management guidance\" target=\"_blank\">information risk management guidance</a>?",
+        "How have you designed and implemented the components of your system according to government best practice?",
+        " How have you determined the security requirements of cloud services using the <a href=\"https://www.ncsc.gov.uk/guidance/implementing-cloud-security-principles\" title=\"Cloud security principles\" target=\"_blank\">Cloud security principles</a> and <a href=\"https://www.ncsc.gov.uk/guidance/cloud-security-collection\" title=\"Cloud security guidance\" target=\"_blank\">accompanying guidance</a>?"
+      ]
     },
     {
       "number": 7,
       "title": "Make privacy integral",
       "readmore": "https://www.gov.uk/guidance/make-privacy-integral",
-      "summary": "Make sure citizens’ rights are protected by integrating privacy as an essential part of your system."
+      "summary": "Make sure citizens’ rights are protected by integrating privacy as an essential part of your system.",
+      "prompts": [
+        "Will the project or programme collect new information about individuals?",
+        "Will individuals have to provide information about themselves to the project or programme?",
+        "Will information about individuals be disclosed to parties that have not previously had routine access?",
+        "Are you using information about individuals in a way it is not currently used?",
+        "Have you conducted a Privacy Impact Assessment? What was the outcome?",
+        "Does the project or programme involve you using new technology that might be perceived as being privacy intrusive? For example, the use of biometrics or facial recognition?",
+        "Is the information about individuals of a kind particularly likely to raise privacy concerns or expectations? For example, health records, that people would consider to be private?",
+        "Will the project or programme require you to contact individuals in ways that they may find intrusive?"
+      ]
     },
     {
       "number": 8,
       "title": "Share and reuse technology",
       "readmore": "https://www.gov.uk/guidance/share-and-reuse-technology",
-      "summary": "Promote good practice and avoid duplicated efforts by sharing and reusing services, data and software components."
+      "summary": "Promote good practice and avoid duplicated efforts by sharing and reusing services, data and software components.",
+      "prompts": [
+        "Have you joined one of the four cross-government technology communities that discuss the latest thinking on services?",
+        "Have you considered using common government platforms and services where appropriate?",
+        "How have you explored whether there are other government services or software components elsewhere in Government which you could use?",
+        "Have you shared or reused documentation from other discoveries, if so, what?",
+        "What existing services both in and out of government have you considered using?",
+        "How have you made your solution open for reuse?"
+      ]
     },
     {
       "number": 9,
       "title": "Integrate and adapt technology",
       "readmore": "https://www.gov.uk/guidance/integrate-and-adapt-technology",
-      "summary": "Your technology should work with existing technologies, processes and infrastructure in your organisation, and adapt to future demands."
+      "summary": "Your technology should work with existing technologies, processes and infrastructure in your organisation, and adapt to future demands.",
+      "prompts": [
+        "What type of integration model do you use to support your technology?",
+        "How do you identify single points of failure?",
+        "Do you use independently developed components that work together but can be easily exchanged?",
+        "How thorough is the map of your technology infrastructure?",
+        "Do you have a plan for integrating or modernising legacy systems?",
+        "Is it possible for your technology to work with legacy or newer systems?"
+      ]
     },
     {
       "number": 10,
       "title": "Make better use of data",
       "readmore": "https://www.gov.uk/guidance/make-better-use-of-data",
-      "summary": "Consider how to minimise data collection and reuse data to avoid duplication of datasets."
+      "summary": "Consider how to minimise data collection and reuse data to avoid duplication of datasets.",
+      "prompts": [
+        "How have you minimised data collection?",
+        "How have you communicated to stakeholders how data will be used?",
+        "How have you avoided duplication of datasets?",
+        "Have you anonymised personal data?",
+        "Have you considered ethical issues around using data, and assessing these according to the principles of the <a href=\"https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/524298/Data_science_ethics_framework_v1.0_for_publication__1_.pdf\" title=\"Data Science ethical framework\" target=\"_blank\">Data Science Ethical Framework</a>?",
+        "How have you made newly collected data easily accessible?",
+        "What common standards and patterns have you used to ensure data can be easily analysed?",
+        "How does your solution align with best practices for collecting, storing, analysing and sharing data?"
+      ]
     },
     {
       "number": 11,
       "title": "Define your purchasing strategy",
       "readmore": "https://www.gov.uk/guidance/define-your-purchasing-strategy",
-      "summary": "Your purchasing strategy must show you’ve considered commercial and technology aspects, and contractual limitations."
+      "summary": "Your purchasing strategy must show you’ve considered commercial and technology aspects, and contractual limitations.",
+      "prompts": [
+        "Are commercial products and opportunities competitive and innovative?",
+        "What are your long-term financial savings?",
+        "Do you have good supplier relations?",
+        "What is your commercial approach and how does it support the disaggregation of contracts?",
+        "How does your strategy help with the transition to the cloud, commodity and common technology services?",
+        "How does your strategy support  shorter, more manageable contracts with a streamlined renewal process?",
+        "Do you have a clearer view of contract status, risks and issues? Can you explain this?"
+      ]
     },
     {
       "number": 12,

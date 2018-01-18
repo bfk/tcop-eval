@@ -16,23 +16,27 @@
         <a href="{{ config.tcop.points[pointnum-1].readmore }}" target="_blank">Read more about point {{ config.tcop.points[pointnum-1].number }}</a>
       </p>
 
+      {% if config.tcop.points[pointnum-1].prompts %}
       <details>
         <summary><span class="summary">Prompts to consider</span></summary>
         <div class="panel panel-border-narrow">
           {% for prompt in config.tcop.points[pointnum-1].prompts %}
-          <p>{{ prompt }}</p>
+          <p>{{ prompt | safe }}</p>
           {% endfor %}
         </div>
       </details>
+      {% endif %}
 
+      {% if config.tcop.points[pointnum-1].antipatterns %}
       <details>
         <summary><span class="summary">Anti-patterns</span></summary>
         <div class="panel panel-border-narrow">
           {% for pattern in config.tcop.points[pointnum-1].antipatterns %}
-          <p>{{ pattern }}</p>
+          <p>{{ pattern | safe }}</p>
           {% endfor %}
         </div>
       </details>
+      {% endif %}
 
       <!-- Copied from https://govuk-elements.herokuapp.com/form-elements/#form-toggle-content-checkboxes -->
 
@@ -42,7 +46,7 @@
 
             <legend>
               <h1 class="heading-medium">
-                What team behaviours have you observed in relation to Point 1?
+                What team behaviours have you observed in relation to Point {{ pointnum }}?
               </h1>
               <span class="body-text">Select all behaviours that you have seen.</span>
             </legend>
@@ -96,21 +100,21 @@
           <fieldset>
 
             <legend>
-              <h1 class="heading-medium">Assessment Level</h1>
+              <h1 class="heading-medium">Evaluation</h1>
             </legend>
 
             <div class="multiple-choice">
-              <input id="radio-1" type="radio" name="radio-group" value="Assure">
-              <label for="radio-1">Assure</label>
+              <input id="radio-1" type="radio" name="eval-radio-group" value="fine">
+              <label for="radio-1">All fine</label>
             </div>
             <div class="multiple-choice">
-              <input id="radio-2" type="radio" name="radio-group" value="Monitor">
-              <label for="radio-2">Monitor</label>
+              <input id="radio-2" type="radio" name="eval-radio-group" value="issues">
+              <label for="radio-2">Some issues</label>
             </div>
             <p class="form-block">or</p>
             <div class="multiple-choice">
-              <input id="radio-3" type="radio" name="radio-group" value="Control">
-              <label for="radio-3">Control</label>
+              <input id="radio-3" type="radio" name="eval-radio-group" value="tricky">
+              <label for="radio-3">Tricky issues</label>
             </div>
 
           </fieldset>
@@ -126,7 +130,7 @@
 
       </form>
 
-
+<!--
       <pre>
       <div class="code">
         Length: {{config.tcop.points.length}}
@@ -135,7 +139,22 @@
         First behaviour: {{config.tcop.points[0].teambehaviours[0].id }}
       </div>
       </pre>
+-->
 
+
+    </div>
+      <div class="column-third">
+
+      <aside class="govuk-related-items" role="complementary">
+        <h2 class="heading-medium" id="subsection-title">Jump to section</h2>
+        <nav role="navigation" aria-labelledby="subsection-title">
+          <ul class="font-xsmall">
+            {% for point in config.tcop.points %}
+            <li><a href="/point/{{ point.number }}">{{ point.number + '. ' + point.title }}</a></li>
+            {% endfor %}
+          </ul>
+        </nav>
+      </aside>
 
     </div>
   </div>
