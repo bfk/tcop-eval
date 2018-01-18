@@ -7,16 +7,6 @@
       "title": "Define user needs",
       "readmore": "https://www.gov.uk/guidance/define-user-needs",
       "summary": "Understand your users and their needs. Develop knowledge of your users and what that means for your technology project or programme.",
-      "teambehaviours": [
-        {
-          "id": "individual-interviews",
-          "description": "The team conducts individual user interviews, not just presentations/consultations with groups."
-        },
-        {
-          "id": "personas",
-          "description": "The team has identified user personas or segments, preferably broken down by goal or activity rather than demographics"
-        }
-      ],
       "prompts": [
         "Have you carried out user research in the form of multiple interviews or observations of the users?",
         "Do you have a thorough knowledge of who your users are?",
@@ -28,7 +18,45 @@
         "Users have been polled only in group sessions during which concepts and plans are presented and feedback requested in general terms.",
         "The language of requirements developed is excessively technical or system-focused and does not reflect what an ordinary user would say or think.",
         "The list of assumed requirements, personas or user needs has not changed significantly from the business case stage"
-      ]
+      ],
+      "teambehaviours": {
+        "expected": [
+          {
+            "id": "individual-interviews",
+            "short-description": "Individual user interviews",
+            "description": "The team conducts individual user interviews, not just presentations/consultations with groups."
+          },
+          {
+            "id": "personas",
+            "short-description": "User personas",
+            "description": "The team has identified user personas or segments, preferably broken down by goal or activity rather than demographics."
+          }
+        ],
+        "strong": [
+          {
+            "id": "prioritized-backlog",
+            "short-description": "Prioritised backlog",
+            "description": "The team works from a prioritised backlog of user needs, written in the form of user stories."
+          },
+          {
+            "id": "variety-research-methods",
+            "short-description": "Variety of research methods",
+            "description": "The team has used a variety of user research methods, including ethnographic, one-on-one lab and usability testing."
+          }
+        ],
+        "exceptional": [
+          {
+            "id": "changed-requirements",
+            "short-description": "Requirements changed due to research",
+            "description": "The team has changed its system requirements or scope due to insights from user research."
+          },
+          {
+            "id": "shared-user-needs",
+            "short-description": "Shared user needs widely",
+            "description": "The team has contributed discovered user needs to help other programmes or departments."
+          }
+        ]
+      }
     },
     {
       "number": 2,

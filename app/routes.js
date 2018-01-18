@@ -16,4 +16,8 @@ router.get('/point/:pointnum', function (req, res) {
   res.render('point', { 'config': config, 'pointnum': parseInt(req.params.pointnum) })
 })
 
+router.get('/tcop-answers', function (req, res) {
+  res.render('tcop-answers', { 'config': config })
+})
+
 module.exports = router

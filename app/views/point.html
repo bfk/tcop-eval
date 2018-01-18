@@ -1,10 +1,10 @@
-{% extends "layout.html" %} {% block page_title %} 1. Define User Needs {% endblock %} {% block content %}
+{% extends "layout.html" %} {% block page_title %}Point {{ config.tcop.points[pointnum-1].number }}. {{ config.tcop.points[pointnum-1].title }} {% endblock %} {% block content %}
 
 <main id="content" role="main">
   <div class="grid-row">
     <div class="column-two-thirds">
 
-      <a class="link-back" href="/start-page">Back</a>
+      <a class="link-back" href="/start-page">Back to start</a>
 
       <h1 class="heading-xlarge">
         Point {{ config.tcop.points[pointnum-1].number }}. {{ config.tcop.points[pointnum-1].title }}
@@ -47,20 +47,46 @@
               <span class="body-text">Select all behaviours that you have seen.</span>
             </legend>
 
-            {% for behaviour in config.tcop.points[pointnum-1].teambehaviours %}
+            <h3 class="heading-small">
+              Expected team behaviours
+            </h3>
+            {% for behaviour in config.tcop.points[pointnum-1].teambehaviours.expected %}
             <div class="multiple-choice">
               <input id="point{{pointnum}}-teambehaviours-{{behaviour.id}}" name="point{{pointnum}}-teambehaviours" type="checkbox" value="{{behaviour.id}}">
               <label for="point{{pointnum}}-teambehaviours-{{behaviour.id}}">{{behaviour.description}}</label>
             </div>
             {% endfor %}
 
+            <h3 class="heading-small">
+              Strong team behaviours
+            </h3>
+            {% for behaviour in config.tcop.points[pointnum-1].teambehaviours.strong %}
+            <div class="multiple-choice">
+              <input id="point{{pointnum}}-teambehaviours-{{behaviour.id}}" name="point{{pointnum}}-teambehaviours" type="checkbox" value="{{behaviour.id}}">
+              <label for="point{{pointnum}}-teambehaviours-{{behaviour.id}}">{{behaviour.description}}</label>
+            </div>
+            {% endfor %}
+
+            <h3 class="heading-small">
+              Exceptional team behaviours
+            </h3>
+            {% for behaviour in config.tcop.points[pointnum-1].teambehaviours.exceptional %}
+            <div class="multiple-choice">
+              <input id="point{{pointnum}}-teambehaviours-{{behaviour.id}}" name="point{{pointnum}}-teambehaviours" type="checkbox" value="{{behaviour.id}}">
+              <label for="point{{pointnum}}-teambehaviours-{{behaviour.id}}">{{behaviour.description}}</label>
+            </div>
+            {% endfor %}
+
+            <h3 class="heading-small">
+              Other team behaviours
+            </h3>
             <div class="multiple-choice" data-target="other-behaviour">
-              <input id="behaviours-other" name="point-1-behaviours" type="checkbox" value="other-behaviour">
-              <label for="behaviours-other">Other team behaviour supporting Point 1</label>
+              <input id="behaviours-other" name="point{{pointnum}}-otherbehaviour" type="checkbox" value="other-behaviour">
+              <label for="behaviours-other">Other team behaviour supporting "{{ config.tcop.points[pointnum-1].title | lower }}"</label>
             </div>
             <div class="panel panel-border-narrow js-hidden" id="other-behaviour">
-              <label class="form-label" for="point-1-other-behaviour-description">Other positive team behaviour you have observed</label>
-              <input class="form-control" type="text" id="point-1-other-behaviour-description" name="point-1-other-behaviour-description">
+              <label class="form-label" for="point{{pointnum}}-other-behaviour-description">Other positive team behaviour you have observed</label>
+              <input class="form-control" type="text" id="point{{pointnum}}-other-behaviour-description" name="point{{pointnum}}-other-behaviour-description">
             </div>
 
           </fieldset>
@@ -93,11 +119,15 @@
 
         <div class="form-group">
           <input class="button" type="submit" value="Continue to {{ 'Point ' + (pointnum+1) if pointnum < config.tcop.points.length else 'Summary' }}">
+          <p>
+            <a href="/tcop-answers" title="Evaluation summary">Skip to Summary</a>
+          </p>
         </div>
 
       </form>
 
-            <pre>
+
+      <pre>
       <div class="code">
         Length: {{config.tcop.points.length}}
         Variable pointnum: {{ pointnum }}

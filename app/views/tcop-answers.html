@@ -1,13 +1,50 @@
-{% extends "layout.html" %} {% block page_title %} Check your answers {% endblock %} {% block content %}
+{% extends "layout.html" %} {% block page_title %} Evaluation results {% endblock %} {% block content %}
 
 <main id="content" role="main">
   <div class="grid-row">
     <div class="column-two-thirds">
-      <a href="1-define-user-needs" class="link-back">Back</a>
+      <a href="/start-page" class="link-back">Back to start</a>
 
       <h1 class="heading-large">
         Evaluation Results
       </h1>
+
+      {% for point in config.tcop.points %}
+      <table>
+        <caption class="heading-medium">{{ 'Point ' + point.number + '. ' + point.title }}</caption>
+        <tbody>
+          <tr>
+            <td colspan=3>
+              <div class="data">
+                <span class="data-item bold-large">5/12</span>
+                 <span class="data-item bold-xsmall">Maturity score</span>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Expected team behaviours</td>
+            <td>&#x2713;&nbsp;Individual user interviews<br /> &#x2713;&nbsp;User personas</td>
+            <td>&nbsp;</td>
+          </tr>
+          <tr>
+            <td valign="top">Strong team behaviours</td>
+            <td>&nbsp;</td>
+            <td>&#x274C;&nbsp;Prioritised backlog<br />
+            &#x274C;&nbsp;Variety of research methods</td>
+          </tr>
+          <tr>
+            <td valign="top">Exceptional team behaviours</td>
+            <td>&#x2713;&nbsp;Requirements changed due to research</td>
+            <td>&#x274C;&nbsp;Shared user needs widely</td>
+          </tr>
+          <tr>
+            <td valign="top">Other positive behaviours</td>
+            <td colspan=2>The team has put significant effort into the development of user segments, defining how each segment can be reached and how assisted digital support can be extended to them if necessary.</td>
+          </tr>
+        </tbody>
+      </table>
+      {% endfor %}
+
 
 
       <!-- only add a heading for a list if there is more than one list -->
@@ -26,7 +63,7 @@
           </dt>
           <dd class="cya-answer">
             <ul>
-              {% for behaviour in data['point-1-behaviours'] %}
+              {% for behaviour in data['point1-behaviours'] %}
               <li>{{ behaviour }}</li>
               {% else %}
               <li>No behaviours selected</li>
@@ -34,15 +71,15 @@
             </ul>
           </dd>
 
-          <dt class="cya-question">
+          <dt class="cya-questions-long">
             Other behaviour
           </dt>
           <dd class="cya-answer">
-            {{ data['point-1-other-behaviour-description'] }}
+            {{ data['point1-other-behaviour-description'] }}
           </dd>
 
           <dd class="cya-change">
-            <a href="1-define-user-needs">
+            <a href="/point/1">
               Change<span class="visually-hidden"> Point 1</span>
             </a>
           </dd>
@@ -70,8 +107,8 @@
         </div>
       </dl>
 
-      
-            <h2 class="heading-medium">
+
+      <h2 class="heading-medium">
         Point 3. Be open and use open source
       </h2>
 
