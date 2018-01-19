@@ -1,10 +1,10 @@
 {
-  "name": "express-prototype",
-  "description": "GOVUK prototyping app in Express",
-  "version": "6.3.0",
+  "name": "tcop-eval",
+  "description": "Tech Code of Practice Evaluation Tool",
+  "version": "0.0.1",
   "private": true,
   "engines": {
-    "node": ">=6.11.1 <7.0"
+    "node": "6.12.0"
   },
   "scripts": {
     "start": "node start.js",
