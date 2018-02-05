@@ -20,4 +20,10 @@ router.get('/tcop-answers', function (req, res) {
   res.render('tcop-answers', { 'config': config })
 })
 
+router.get('/settings', function (req, res) {
+  res.render('settings', { 'config': config })
+})
+
+
+
 module.exports = router

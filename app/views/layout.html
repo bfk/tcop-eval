@@ -20,12 +20,11 @@
             {% if serviceName %} {{ serviceName }} {% endif %}
           {% endblock %}
         </a>
-        <!--
+        
         <ul id="proposition-links">
-          <li><a href="url-to-page-1" class="active">Navigation item #1</a></li>
-          <li><a href="url-to-page-2">Navigation item #2</a></li>
+          <li><a href="/settings" class="active">Settings</a></li>
         </ul>
-        -->
+        
       </nav>
     </div>
   </div>
@@ -35,6 +34,7 @@
 {% block header_class %}
   with-proposition
 {% endblock %}
+
 
 {% block footer_support_links %}
   {% if useAutoStoreData %}
@@ -53,3 +53,5 @@
   {% endblock %}
   <!-- GOV.UK Prototype kit {{releaseVersion}} -->
 {% endblock %}
+
+
