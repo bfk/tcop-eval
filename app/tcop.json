@@ -68,8 +68,52 @@
         "What range of devices do you need to work with your technology?",
         "Can users access your services in different web browsers?",
         "Is your service/system compatible with assistive technologies?"
-      ]
-    },
+      ],
+      "antipatterns": [
+        "With JavaScript turned off, the service does not render or behave properly.",
+        "Accessibility has been evaluated based on a heuristic review of the service, but not actually tested with users.",
+        "The service team cites an expected standard, such as WCAG2 AA or AAA, without showing actual testing and mitigation of issues.",
+        "Administrative or internal user interfaces within the service are assumed to be exempt from accessibility requirements."
+     ],
+     "teambehaviours": {
+        "expected": [
+          {
+            "id": "progressive-enhancement",
+            "short-description": "Progressive enhancement",
+            "description": "User interfaces work well using standard HTML and CSS elements with broad compatibility, with advanced CSS or scripting functionality added progressively."
+          },
+          {
+            "id": "accessibility-audit",
+            "short-description": "Accessibility Audit",
+            "description": "The team has engaged internal or external accessibility experts to evaluate accessibility issues specifically."
+          }
+        ],
+        "strong": [
+          {
+            "id": "act-on-accessibility",
+            "short-description": "Accessibility impacts addressed",
+            "description": "The team has acted to mitigate all high-impact and most medium-impact accessiblity recommendations."
+          },
+          {
+            "id": "accessibility-expertise",
+            "short-description": "Accessibility expertise",
+            "description": "The team contains at least one expert on accessibility issues, and all team members have undergone accessibility training."
+          }
+        ],
+        "exceptional": [
+          {
+            "id": "accessibility-user-panel",
+            "short-description": "Accessibility user panel",
+            "description": "The team consistent tests the technology using a panel of users with accessibility needs."
+          },
+          {
+            "id": "accessibility-standards",
+            "short-description": "Sets accessibility standards",
+            "description": "Creates and evangelises accessibility standards within and outside the organisation and actively participates in cross-government accessibility forums."
+          }
+        ]
+      }
+   },
     {
       "number": 3,
       "title": "Be open and use open source",
