@@ -19,6 +19,44 @@
         "The language of requirements developed is excessively technical or system-focused and does not reflect what an ordinary user would say or think.",
         "The list of assumed requirements, personas or user needs has not changed significantly from the business case stage"
       ],
+      "programmebehaviours": {
+        "expected": [
+          {
+            "id": "",
+            "short-description": "",
+            "description": ""
+          },
+          {
+            "id": "",
+            "short-description": "",
+            "description": ""
+          }
+        ],
+        "strong": [
+          {
+            "id": "",
+            "short-description": "",
+            "description": ""
+          },
+          {
+            "id": "",
+            "short-description": "",
+            "description": ""
+          }
+        ],
+        "exceptional": [
+          {
+            "id": "",
+            "short-description": "",
+            "description": ""
+          },
+          {
+            "id": "",
+            "short-description": "",
+            "description": ""
+          }
+        ]
+      },
       "teambehaviours": {
         "expected": [
           {

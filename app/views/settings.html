@@ -26,28 +26,47 @@
 
       </div>
 
-
-
         <div class="form-group">
           <fieldset>
-
             <legend>
-              <h1 class="heading-medium">
+              <h3§ class="heading-medium">
                 What points would you like to evaluate?
-              </h1>
+              </h3>
             </legend>
 
             {% for point in config.tcop.points %}
             <div class="multiple-choice">
-              <input id="session-points-{{point.number}}" name="session-point-{{point.number}}" type="checkbox" value="">
+              <input id="session-points-{{point.number}}" name="session-point" type="checkbox" value="session-points-{{point.number}}" checked>
               <label for="session-point-{{point.number}}">Point {{point.number}}: {{point.title}}</label>
             </div>
             {% endfor %}
 
           </fieldset>
         </div>
+
+        <div class="form-group">
+          <fieldset>
+            <legend>
+              <h3 class="heading-medium">
+                Are you interested in team behaviours or programme behaviours?
+              </h3>
+              <span class="body-text">Select all that apply<br />(If you select neither you will record a general evaluation only)</span>
+            </legend>
+
+            <div class="multiple-choice">
+              <input id="session-team" name="session-team" type="checkbox" value="session-team" checked>
+              <label for="session-team">Team Behaviours</label>
+            </div>
+            <div class="multiple-choice">
+              <input id="session-programme" name="session-programme" type="checkbox" value="session-team" checked>
+              <label for="session-programme">Programme Behaviours</label>
+            </div>
+          </fieldset>
+        </div>
+
+
         
-              <div class="form-group">
+	<div class="form-group">
 
         <a href="/start-page" class="button">Return to evaluation</a>
 
