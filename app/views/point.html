@@ -86,11 +86,11 @@
             </h3>
             <div class="multiple-choice" data-target="other-behaviour">
               <input id="behaviours-other" name="point{{pointnum}}-otherbehaviour" type="checkbox" value="other-behaviour">
-              <label for="behaviours-other">Other team behaviour supporting "{{ config.tcop.points[pointnum-1].title | lower }}"</label>
+              <label for="behaviours-other">Other behaviours concerning "{{ config.tcop.points[pointnum-1].title | lower }}"</label>
             </div>
             <div class="panel panel-border-narrow js-hidden" id="other-behaviour">
               <label class="form-label" for="point{{pointnum}}-other-behaviour-description">Other positive team behaviour you have observed</label>
-              <input class="form-control" type="text" id="point{{pointnum}}-other-behaviour-description" name="point{{pointnum}}-other-behaviour-description">
+              <input class="form-control" type="textarea" id="point{{pointnum}}-other-behaviour-description" name="point{{pointnum}}-other-behaviour-description">
             </div>
 
           </fieldset>
