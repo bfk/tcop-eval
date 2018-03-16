@@ -168,7 +168,50 @@
         "Will the solution work with your other technology?",
         "Is the solution’s <a href=\"https://opensource.org/licenses\" title=\"Open Source Licenses\" target=\"_blank\">licence</a> acceptable to your organisation’s business requirements?",
         "Is the solution’s warranty acceptable and is there an option to buy one?"
-      ]
+      ],
+      "antipatterns": [
+        "Gaps in functionality or affordances have put off the team using an open source alternative, rather than re-examining needs or making needed extensions.",
+        "Code has been published, but only in a publication model, often without a full history, rather than actually working in the open.",
+        "General security principles have been used as a reason not to open at least some code, without looking specifically at exceptions."
+    ],      
+     "teambehaviours": {
+        "expected": [
+          {
+            "id": "open-source-aware",
+            "short-description": "Aware of open source alternatives",
+            "description": "Team has done a fair evaluation of of the open source landscape to see if there are already community-supported libraries or projects meeting the need."
+          },
+          {
+            "id": "code-open-basic",
+            "short-description": "Code in an open repo",
+            "description": "New code created by the programme is available in an open repository."
+          }
+        ],
+        "strong": [
+          {
+            "id": "working-in-open",
+            "short-description": "Working in the open",
+            "description": "Open repositories are clearly the ongoing day-to-day work of a development team, including commit histories, pull requests, etc."
+          },
+          {
+            "id": "skills-modify",
+            "short-description": "Skills to modify OSS",
+            "description": "Team has the skills and confidence to improve or adapt an open-source solution or platform as needed."
+          }
+        ],
+        "exceptional": [
+          {
+            "id": "cotributes-shared",
+            "short-description": "Contributes to shared platforms",
+            "description": "Team contributes to shared platforms used by others, either their own systems or cross-government services."
+          },
+          {
+            "id": "docs-as-code",
+            "short-description": "Docs as code",
+            "description": "Documentation of the structure, logic and function of the system is complete, and is created and managed as code, versioned in synch with the underyling service code."
+          }
+        ]
+      }      
     },
     {
       "number": 4,
