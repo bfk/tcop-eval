@@ -17,3 +17,36 @@ Assurance teams and others might also use this tool to create a snapshot of thei
 
 - [Installation guide for new users (non technical)](https://govuk-prototype-kit.herokuapp.com/docs/install/introduction)
 - [Installation guide for developers (technical)](https://govuk-prototype-kit.herokuapp.com/docs/install/developer-install-instructions)
+
+## Docker installation
+
+
+clone the github repository
+
+```console
+$ git clone  git@github.com:bfk/tcop-eval.git
+```
+
+build the image:
+
+```console
+$ docker build -t tcop-eval .
+```
+
+run the container (use -v to mount your local app directory in the container)
+
+```console
+$ docker run  --detach --rm -p 3000:3000 --name tcop-eval -v /Users/user/tcop-eval/app:/usr/src/tcop-eval/app tcop-eval:latest
+```
+
+access the web app:
+
+http://localhost:3000
+
+stop the container:
+
+```console
+$ docker stop tcop-eval
+```
+
+Note: you can modify the evaluation questions by editing tcop-eval/app/tcop.json (stop and restart the container to load the changes).
