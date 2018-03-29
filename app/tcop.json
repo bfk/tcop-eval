@@ -278,8 +278,44 @@
       "summary": "Use public cloud first as stated in the government’s cloud first policy.",
       "prompts": [
         "How have you evaluated potential <a href=\"https://www.gov.uk/guidance/how-to-assess-a-hosting-business-case\" title=\"Assessing a hosting business case\" target=\"_blank\">public cloud services</a> before considering alternatives such as data centres?",
-        "Can you demonstrate that your chosen service represents the best value for money?"
-      ]
+        "Can you demonstrate that your chosen service represents the best value for money?",
+        "Have you been in contact with the GOV.UK PaaS team about the hosting requirements for the service?"
+      ],
+      "antipatterns": [
+        "A 'private cloud' has been used without a specific regulatory or security justification.",
+        "Though a public cloud is being used (probably AWS, Azure or Google Cloud), the team uses generic compute boxes without taking advantage of specfic cloud components",
+        "There are multiple accounts for the same cloud provider within the organisation with no shared components such as identity management, logging or security infrastructure.",
+        "On-premise servers remain, with no planning to shift to either Crown Hosting or to a virtualised cloud environment.",
+        "The team either has not considered GOV.UK PaaS for hosting or dismisses it as 'not production ready' with no specific justification."
+      ],
+      "teambehaviours": {
+        "expected": [
+          {
+            "id": "cost-benefit",
+            "short-description": "cost benefit",
+            "description": "any team selecting an alternative to the cloud can demonstrate it offers better value for money"
+          },
+          {
+            "id": "SasS-options",
+            "short-description": "Consider SaaS options",
+            "description": "the team can show they have considered possible SaaS solutions before proposing bespoke developments."
+          }
+        ],
+        "strong": [
+          {
+            "id": "public-cloud",
+            "short-description": "Public cloud first",
+            "description": "the team can demonstrate they have evaluated GOV.UK PaaS offering in addition to the major cloud providers."
+          }
+        ],
+        "exceptional": [
+          {
+            "id": "evolving technology",
+            "short-description": "Evolving cloud technologies",	
+            "description": "the team has embraced advances in cloud technology (e.g containerization) to improve their solution."
+          }
+        ]
+      }
     },
     {
       "number": 6,
