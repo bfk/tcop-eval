@@ -227,7 +227,49 @@
         "Are you clear about your approved source?",
         "How have you used <a href=\"http://restfulapi.net\" title=\"Rest APIs\" target=\"_blank\">RESTful APIs</a> for integration where possible?",
         "How have you considered the benefits of flexibility in your technology?"
-      ]
+      ],
+      "antipatterns": [
+        "Have not done any meaningful survey of standards for data, APIs, or common identifiers in the space.",
+        "Machine-to-machine communications cannot be encoded using human-readable formats."
+    ],
+    "teambehaviours": {
+        "expected": [
+          {
+            "id": "",
+            "short-description": "",
+            "description": ""
+          },
+          {
+            "id": "",
+            "short-description": "",
+            "description": ""
+          }
+        ],
+        "strong": [
+          {
+            "id": "",
+            "short-description": "",
+            "description": ""
+          },
+          {
+            "id": "",
+            "short-description": "",
+            "description": ""
+          }
+        ],
+        "exceptional": [
+          {
+            "id": "",
+            "short-description": "",
+            "description": ""
+          },
+          {
+            "id": "",
+            "short-description": "",
+            "description": ""
+          }
+        ]
+      }
     },
     {
       "number": 5,
