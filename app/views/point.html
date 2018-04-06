@@ -1,4 +1,5 @@
 {% extends "layout.html" %} {% block page_title %}Point {{ config.tcop.points[pointnum-1].number }}. {{ config.tcop.points[pointnum-1].title }} {% endblock %} {% block content %}
+{% set thispoint = config.tcop.points[pointnum-1] %}
 
 <main id="content" role="main">
   <div class="grid-row">
@@ -7,31 +8,32 @@
       <a class="link-back" href="/start-page">Back to start</a>
 
       <h1 class="heading-xlarge">
-        Point {{ config.tcop.points[pointnum-1].number }}. {{ config.tcop.points[pointnum-1].title }}
+        Point {{ thispoint.number }}. {{ thispoint.title }}
       </h1>
       <p class="body-text">
-        {{ config.tcop.points[pointnum-1].summary }}
+        {{ thispoint.summary }}
       </p>
       <p class="body-text">
-        <a href="{{ config.tcop.points[pointnum-1].readmore }}" target="_blank">Read more about point {{ config.tcop.points[pointnum-1].number }}</a>
+        <a href="{{ thispoint.readmore }}" target="_blank">Read more about point {{ thispoint.number }}</a>
       </p>
+      
 
-      {% if config.tcop.points[pointnum-1].prompts %}
+      {% if thispoint.prompts %}
       <details>
         <summary><span class="summary">Prompts to consider</span></summary>
         <div class="panel panel-border-narrow">
-          {% for prompt in config.tcop.points[pointnum-1].prompts %}
+          {% for prompt in thispoint.prompts %}
           <p>{{ prompt | safe }}</p>
           {% endfor %}
         </div>
       </details>
       {% endif %}
 
-      {% if config.tcop.points[pointnum-1].antipatterns %}
+      {% if thispoint.antipatterns %}
       <details>
         <summary><span class="summary">Anti-patterns</span></summary>
         <div class="panel panel-border-narrow">
-          {% for pattern in config.tcop.points[pointnum-1].antipatterns %}
+          {% for pattern in thispoint.antipatterns %}
           <p>{{ pattern | safe }}</p>
           {% endfor %}
         </div>
@@ -56,7 +58,7 @@
             </h3>
             {% for behaviour in config.tcop.points[pointnum-1].teambehaviours.expected %}
             <div class="multiple-choice">
-              <input id="point{{pointnum}}-teambehaviours-{{behaviour.id}}" name="point{{pointnum}}-teambehaviours" type="checkbox" value="{{behaviour.id}}">
+              <input id="point{{pointnum}}-teambehaviours-{{behaviour.id}}" name="point{{ thispoint.number }}-teambehaviours" type="checkbox" value="{{behaviour.description}}" {{ checked("point"+thispoint.number+"-teambehaviours", behaviour.description) }}>
               <label for="point{{pointnum}}-teambehaviours-{{behaviour.id}}">{{behaviour.description}}</label>
             </div>
             {% endfor %}
@@ -64,9 +66,9 @@
             <h3 class="heading-small">
               Strong team behaviours
             </h3>
-            {% for behaviour in config.tcop.points[pointnum-1].teambehaviours.strong %}
+            {% for behaviour in thispoint.teambehaviours.strong %}
             <div class="multiple-choice">
-              <input id="point{{pointnum}}-teambehaviours-{{behaviour.id}}" name="point{{pointnum}}-teambehaviours" type="checkbox" value="{{behaviour.id}}">
+              <input id="point{{pointnum}}-teambehaviours-{{behaviour.id}}" name="point{{ thispoint.number }}-teambehaviours" type="checkbox" value="{{behaviour.description}}" {{ checked("point"+thispoint.number+"-teambehaviours", behaviour.description) }}>
               <label for="point{{pointnum}}-teambehaviours-{{behaviour.id}}">{{behaviour.description}}</label>
             </div>
             {% endfor %}
@@ -74,9 +76,9 @@
             <h3 class="heading-small">
               Exceptional team behaviours
             </h3>
-            {% for behaviour in config.tcop.points[pointnum-1].teambehaviours.exceptional %}
+            {% for behaviour in thispoint.teambehaviours.exceptional %}
             <div class="multiple-choice">
-              <input id="point{{pointnum}}-teambehaviours-{{behaviour.id}}" name="point{{pointnum}}-teambehaviours" type="checkbox" value="{{behaviour.id}}">
+              <input id="point{{pointnum}}-teambehaviours-{{behaviour.id}}" name="point{{ thispoint.number }}-teambehaviours" type="checkbox" value="{{behaviour.description}}" {{ checked("point"+thispoint.number+"-teambehaviours", behaviour.description) }}>
               <label for="point{{pointnum}}-teambehaviours-{{behaviour.id}}">{{behaviour.description}}</label>
             </div>
             {% endfor %}
@@ -88,21 +90,21 @@
           <fieldset>
 
             <legend>
-              <h1 class="heading-medium">Summary of Point {{pointnum}} </h1>
+              <h1 class="heading-medium">Overall summary of Point {{pointnum}} </h1>
             </legend>
 
             <div class="multiple-choice">
-              <input id="radio-1" type="radio" name="eval-radio-group" value="fine">
-              <label for="radio-1">All fine</label>
+              <input id="point-summary-fine" type="radio" name="point{{ pointnum }}-point-summary" value="All fine" {{ checked("point"+pointnum+"-point-summary", "All fine") }}>
+              <label for="point-summary-fine">All fine</label>
             </div>
             <div class="multiple-choice">
-              <input id="radio-2" type="radio" name="eval-radio-group" value="issues">
-              <label for="radio-2">Some issues</label>
+              <input id="point-summary-issues" type="radio" name="point{{ pointnum }}-point-summary" value="Some issues" {{ checked("point"+pointnum+"-point-summary", "Some issues") }}>
+              <label for="point-summary-issues">Some issues</label>
             </div>
             <p class="form-block">or</p>
             <div class="multiple-choice">
-              <input id="radio-3" type="radio" name="eval-radio-group" value="tricky">
-              <label for="radio-3">Tricky issues</label>
+              <input id="point-summary-tricky" type="radio" name="point{{ pointnum }}-point-summary" value="Tricky issues" {{ checked("point"+pointnum+"-point-summary", "Tricky issues") }}>
+              <label for="point-summary-tricky">Tricky issues</label>
             </div>
 
           </fieldset>
@@ -112,7 +114,7 @@
             </h3>
 
               <label class="form-label" for="point{{pointnum}}-other-behaviour-description">Other observations relating to Point {{ pointnum }}</label>
-              <textarea class="form-control form-control-3-4" id="point{{pointnum}}-other-behaviour-description" name="point{{pointnum}}-other-behaviour-description" rows="5"></textarea>
+              <textarea class="form-control form-control-3-4" id="point{{pointnum}}-other-behaviour-description" name="point{{pointnum}}-other-behaviour-description" rows="5">{{data['point' + pointnum + '-other-behaviour-description']}}</textarea>
 
         </div>
 

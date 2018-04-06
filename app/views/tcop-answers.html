@@ -16,29 +16,77 @@
   </strong>
       </div>
       
-      <h3 class="heading-medium">Key Points</h3>
+      <h3 class="heading-medium">Project strengths</h3>
       
       <ul class="list list-bullet">
-      	<li>This project is especially strong on Point 1, 2, 4, 5, 7 and 8</li>
-      	<li>Points 3, 6, 9, 10, 11 and 12 might be worth seeking further guidance<li>
+      	<li>Point 1: Define user needs</li>
+      	<li>Point 2: Make things accessible</li>
+	  </ul>
+	  
+      <h3 class="heading-medium">Areas to explore</h3>
+      
+      <ul class="list list-bullet">
+      	<li>Point 1: Define user needs</li>
+      	<li>Point 2: Make things accessible</li>
 	  </ul>
 
       {% for point in config.tcop.points %}
+		<table class="check-your-answers">
+          <thead>
+            <tr>
+              <th colspan="2">
+                <h2 class="heading-medium">
+                  Point {{ point.number }}: <a href='{{ point.readmore }}' title='{{ point.title }}' target='_blank'>{{ point.title }}</a></h4>
+                </h2>
+                <p class="font-xsmall">{{ point.summary }}</p>
+              </th>
+              <th class="change-answer">
+                	<a href="/point/{{ point.number }}">
+	                  Change <span class="visuallyhidden">point {{ point.number }}</span>
+    	            </a>
+              </th>
+            </tr>
+          </thead>
 
-		<h3 class="heading-medium">Point {{ point.number }}</h4>
-		
-		<h4 class="heading-small">Observed behaviours:</h4>
-
-		<ul class="list list-bullet">
-			<li>{{ data['point1-teambehaviours-individual-interviews'] }} Behaviour 1</li>
-			<li>Behaviour 2</li>
-		</ul>
-		
-		<p class="lede">Overall, Point 1 has been evaluated as {{ data['eval-radio-group']}} <em>Some Issues</em></p>
-
-		<p>Observations:</p>		
-		<p class="font-xsmall">{{ data['point' + point.number + '-other-behaviour-description'] }}</p>
-		        	
+          <tbody>
+            <tr>
+              <td>
+                Positive signs
+              </td>
+              <td>
+				<ul class="list list-bullet">
+        		    {% for thing in data['point' + point.number + '-teambehaviours'] %}
+	                	<li>{{ thing }}</li>
+    		        {% else %}
+            		    <li>No specific behaviours recorded</li>
+		            {% endfor %}
+				</ul>
+              </td>
+              <td>
+              </td>
+            </tr>
+            <tr>
+            	<td>
+            		Observations
+            	</td>
+            	<td>
+            		<p class="font-xsmall">{{ data['point' + point.number + '-other-behaviour-description'] }}</p>
+            	</td>
+            	<td>
+            	</td>
+            </tr>
+            <tr>
+            	<td>
+            		Overall
+            	</td>
+            	<td>
+            		{{ data['point' + point.number + '-point-summary'] }}
+            	</td>
+              	<td></td>
+			</tr>
+          </tbody>
+        </table>
+				        	
       {% endfor %}
 
       <h2 class="heading-medium">Now send your evaluation</h2>
