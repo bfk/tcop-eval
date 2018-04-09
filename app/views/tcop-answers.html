@@ -26,11 +26,14 @@
       <h3 class="heading-medium">Areas to explore</h3>
       
       <ul class="list list-bullet">
-      	<li>Point 1: Define user needs</li>
-      	<li>Point 2: Make things accessible</li>
+      	<li>Point 3: Be open and use open source</li>
+      	<li>Point 4: Make use of open standards</li>
 	  </ul>
 
       {% for point in config.tcop.points %}
+      
+      {% if (data['point' + point.number + '-teambehaviours'].length > 0) or data['point' + point.number + '-other-behaviour-description'] or data['point' + point.number + '-point-summary'] %}
+      
 		<table class="check-your-answers">
           <thead>
             <tr>
@@ -49,6 +52,7 @@
           </thead>
 
           <tbody>
+          {% if data['point' + point.number + '-teambehaviours'].length > 0 %}
             <tr>
               <td>
                 Positive signs
@@ -65,6 +69,9 @@
               <td>
               </td>
             </tr>
+        {% endif %}
+        
+        {% if data['point' + point.number + '-other-behaviour-description'] %}
             <tr>
             	<td>
             		Observations
@@ -75,6 +82,9 @@
             	<td>
             	</td>
             </tr>
+        {% endif %}
+        
+        {% if data['point' + point.number + '-point-summary'] %}
             <tr>
             	<td>
             		Overall
@@ -84,9 +94,12 @@
             	</td>
               	<td></td>
 			</tr>
+		{% endif %}
+		
           </tbody>
         </table>
 				        	
+		{% endif %}
       {% endfor %}
 
       <h2 class="heading-medium">Now send your evaluation</h2>
