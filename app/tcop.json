@@ -61,7 +61,7 @@
         "expected": [
           {
             "id": "individual-interviews",
-            "short-description": "Individual user interviews",
+            "short-description": "The team conducts user interviews",
             "description": "The team conducts individual user interviews, not just presentations/consultations with groups."
           },
           {
@@ -73,24 +73,24 @@
         "strong": [
           {
             "id": "prioritized-backlog",
-            "short-description": "Prioritised backlog",
+            "short-description": "The team has a prioritised backlog",
             "description": "The team works from a prioritised backlog of user needs, written in the form of user stories."
           },
           {
             "id": "variety-research-methods",
-            "short-description": "Variety of research methods",
+            "short-description": "The team uses a variety of research methods",
             "description": "The team has used a variety of user research methods, including ethnographic, one-on-one lab and usability testing."
           }
         ],
         "exceptional": [
           {
             "id": "changed-requirements",
-            "short-description": "Requirements changed due to research",
+            "short-description": "The team changes their requirements based on research",
             "description": "The team has changed its system requirements or scope due to insights from user research."
           },
           {
             "id": "shared-user-needs",
-            "short-description": "Shared user needs widely",
+            "short-description": "The team shares their discovered user needs widely",
             "description": "The team has contributed discovered user needs to help other programmes or departments."
           }
         ]

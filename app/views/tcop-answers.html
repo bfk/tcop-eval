@@ -9,48 +9,97 @@
         Evaluation Summary
       </h1>
 
-
       <div class="notice">
         <i class="icon icon-important"><span class="visually-hidden">Warning</span></i>
         <strong class="bold-small">
         This service does not store any of your evaluation permanently. You must download or send the information if you would like to keep it.
   </strong>
       </div>
-
+      
+      <h3 class="heading-medium">Project strengths</h3>
+      
+      <ul class="list list-bullet">
+      	<li>Point 1: Define user needs</li>
+      	<li>Point 2: Make things accessible</li>
+	  </ul>
+	  
+      <h3 class="heading-medium">Areas to explore</h3>
+      
+      <ul class="list list-bullet">
+      	<li>Point 3: Be open and use open source</li>
+      	<li>Point 4: Make use of open standards</li>
+	  </ul>
 
       {% for point in config.tcop.points %}
-      <table>
-        <caption class="heading-medium">{{ 'Point ' + point.number + '. ' + point.title }}</caption>
-        <tbody>
-          <tr>
-            <td colspan=3>
-              <div class="data">
-                <span class="data-item bold-large">5/12</span>
-                <span class="data-item bold-xsmall">Maturity score</span>
-              </div>
-            </td>
-          </tr>
-          <tr>
-            <td valign="top"><strong>Expected</strong> team behaviours</td>
-            <td>&#x2713;&nbsp;Individual user interviews<br /> &#x2713;&nbsp;User personas</td>
-            <td>&nbsp;</td>
-          </tr>
-          <tr>
-            <td valign="top"><strong>Strong</strong> team behaviours</td>
-            <td>&nbsp;</td>
-            <td>&#x274C;&nbsp;Prioritised backlog<br /> &#x274C;&nbsp;Variety of research methods</td>
-          </tr>
-          <tr>
-            <td valign="top"><strong>Exceptional</strong> team behaviours</td>
-            <td>&#x2713;&nbsp;Requirements changed due to research</td>
-            <td>&#x274C;&nbsp;Shared user needs widely</td>
-          </tr>
-          <tr>
-            <td valign="top">Other positive behaviours</td>
-            <td colspan=2>The team has put significant effort into the development of user segments, defining how each segment can be reached and how assisted digital support can be extended to them if necessary.</td>
-          </tr>
-        </tbody>
-      </table>
+      
+      {% if (data['point' + point.number + '-teambehaviours'].length > 0) or data['point' + point.number + '-other-behaviour-description'] or data['point' + point.number + '-point-summary'] %}
+      
+		<table class="check-your-answers">
+          <thead>
+            <tr>
+              <th colspan="2">
+                <h2 class="heading-medium">
+                  Point {{ point.number }}: <a href='{{ point.readmore }}' title='{{ point.title }}' target='_blank'>{{ point.title }}</a></h4>
+                </h2>
+                <p class="font-xsmall">{{ point.summary }}</p>
+              </th>
+              <th class="change-answer">
+                	<a href="/point/{{ point.number }}">
+	                  Change <span class="visuallyhidden">point {{ point.number }}</span>
+    	            </a>
+              </th>
+            </tr>
+          </thead>
+
+          <tbody>
+          {% if data['point' + point.number + '-teambehaviours'].length > 0 %}
+            <tr>
+              <td>
+                Positive signs
+              </td>
+              <td>
+				<ul class="list list-bullet">
+        		    {% for thing in data['point' + point.number + '-teambehaviours'] %}
+	                	<li>{{ thing }}</li>
+    		        {% else %}
+            		    <li>No specific behaviours recorded</li>
+		            {% endfor %}
+				</ul>
+              </td>
+              <td>
+              </td>
+            </tr>
+        {% endif %}
+        
+        {% if data['point' + point.number + '-other-behaviour-description'] %}
+            <tr>
+            	<td>
+            		Observations
+            	</td>
+            	<td>
+            		<p class="font-xsmall">{{ data['point' + point.number + '-other-behaviour-description'] }}</p>
+            	</td>
+            	<td>
+            	</td>
+            </tr>
+        {% endif %}
+        
+        {% if data['point' + point.number + '-point-summary'] %}
+            <tr>
+            	<td>
+            		Overall
+            	</td>
+            	<td>
+            		{{ data['point' + point.number + '-point-summary'] }}
+            	</td>
+              	<td></td>
+			</tr>
+		{% endif %}
+		
+          </tbody>
+        </table>
+				        	
+		{% endif %}
       {% endfor %}
 
       <h2 class="heading-medium">Now send your evaluation</h2>
