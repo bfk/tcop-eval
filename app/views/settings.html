@@ -12,7 +12,7 @@
 
       <a class="link-back" href="/docs/tutorials-and-examples">Back</a>
 
-      <form action="/start-page" method="post" class="form">
+      <form action="" method="post" class="form">
 
       <h2 class="heading-medium">Configure this evaluation session</h2>
         <div class="form-group">
@@ -66,39 +66,35 @@
               <h3 class="heading-medium">
                 Would you like to include an overall evaluation for each point?
               </h3>
-              <span class="body-text">If checked, you will prompted to evaluate each point as <em>All Fine</em>, <em>Some Issues</em> or <em>Tricky Issues</em></span>              
+              <span class="body-text">If checked, you will prompted to evaluate each point as <em>All Fine</em>, <em>Some Issues</em> or <em>Tricky Issues</em></span>
             </legend>
 
             <div class="multiple-choice">
-              <input id="session-overall" name="session-overall" type="checkbox" value="session-overall" checked>
+              <input id="session-overall" name="session-overall" type="checkbox" value="True" {{ checked("session-overall", "True") }}>
               <label for="session-overall">Include overall evaluation</label>
             </div>
           </fieldset>
         </div>
 
-        
-	<div class="form-group">
-
-        <a href="/start-page" class="button">Return to evaluation</a>
-
-      </div>
+        <div class="form-group">
+            <input class="button" type="submit" value="Save">
+        </div>
 
         <p class="body-text">
-          <a href="#">Copy a link to this evaluation</a>
+          <a href="/start-page">Continue to start page</a>
         </p>
-        
-	</form>	
-	
-	<!--
+
+	</form>
+
 	<pre>
 	<div class="code">
 		session-points: {{ data['session-points'] }}
 		email: {{ data['email'] }}
 		service-name: {{ data['service-name'] }}
+    session-overall: {{ data['session-overall'] }}
 	</div>
 	</pre>
-	-->
-	
+
     </div>
   </div>
 </main>

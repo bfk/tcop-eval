@@ -16,7 +16,7 @@
       <p class="body-text">
         <a href="{{ thispoint.readmore }}" target="_blank">Read more about point {{ thispoint.number }}</a>
       </p>
-      
+
 
       {% if thispoint.prompts %}
       <details>
@@ -39,8 +39,6 @@
         </div>
       </details>
       {% endif %}
-
-      <!-- Copied from https://govuk-elements.herokuapp.com/form-elements/#form-toggle-content-checkboxes -->
 
       <form action="{{ '/point/' + (pointnum+1) if pointnum < config.tcop.points.length else '/tcop-answers'}}" method="post" class="form">
         <div class="form-group">
@@ -87,6 +85,8 @@
         </div>
 
         <div class="form-group">
+
+          {% if (data['session-overall'] == 'True') %}
           <fieldset>
 
             <legend>
@@ -108,7 +108,8 @@
             </div>
 
           </fieldset>
-          
+          {% endif %}
+
             <h3 class="heading-small">
               Observations
             </h3>
