@@ -5,6 +5,8 @@
     {
       "number": 1,
       "title": "Define user needs",
+      "keyquestion": "How has the project or programme defined user needs?",
+      "topic": "user needs",
       "readmore": "https://www.gov.uk/guidance/define-user-needs",
       "summary": "Understand your users and their needs. Develop knowledge of your users and what that means for your technology project or programme.",
       "prompts": [
@@ -14,84 +16,46 @@
         "Can you describe how your service/product reflects the needs of the user?"
       ],
       "antipatterns": [
-        "No end-users have been recruited, and requirements have been developed based only on the knowledge of the existing service delivery team.",
-        "Users have been polled only in group sessions during which concepts and plans are presented and feedback requested in general terms.",
-        "The language of requirements developed is excessively technical or system-focused and does not reflect what an ordinary user would say or think.",
-        "The list of assumed requirements, personas or user needs has not changed significantly from the business case stage"
+        "Too few users have been contacted, and the project or programme has mainly used its own knowledge to develop a list of user needs.",
+        "Only using group sessions to present ideas and request feedback. The project or programme will receive useful information but it will be too general to create detailed personas.",
+        "Describing users’ needs in a way that is too technical or system-focused and does not reflect what a user would say or think.",
+        "Assuming that the users’ needs or the created personas have not changed significantly from the business case stage."
       ],
-      "programmebehaviours": {
-        "expected": [
-          {
-            "id": "",
-            "short-description": "",
-            "description": ""
-          },
-          {
-            "id": "",
-            "short-description": "",
-            "description": ""
-          }
-        ],
-        "strong": [
-          {
-            "id": "",
-            "short-description": "",
-            "description": ""
-          },
-          {
-            "id": "",
-            "short-description": "",
-            "description": ""
-          }
-        ],
-        "exceptional": [
-          {
-            "id": "",
-            "short-description": "",
-            "description": ""
-          },
-          {
-            "id": "",
-            "short-description": "",
-            "description": ""
-          }
-        ]
-      },
       "teambehaviours": {
         "expected": [
           {
             "id": "individual-interviews",
             "short-description": "The team conducts user interviews",
-            "description": "The team conducts individual user interviews, not just presentations/consultations with groups."
+            "description": "The project or programme conducts individual user interviews, as well as presentations or consultations with groups."
           },
           {
             "id": "personas",
             "short-description": "User personas",
-            "description": "The team has identified user personas or segments, preferably broken down by goal or activity rather than demographics."
+            "description": "The project or programme has identified users with different needs. They are grouped by goals or activities rather than demographics. User personas might be used to illustrate these different groups."
           }
         ],
         "strong": [
           {
             "id": "prioritized-backlog",
             "short-description": "The team has a prioritised backlog",
-            "description": "The team works from a prioritised backlog of user needs, written in the form of user stories."
+            "description": "The project or programme works from a prioritised backlog of user needs, written in the form of user stories."
           },
           {
             "id": "variety-research-methods",
             "short-description": "The team uses a variety of research methods",
-            "description": "The team has used a variety of user research methods, including ethnographic, one-on-one lab and usability testing."
+            "description": "The project or programme has used a variety of user research methods, including ethnographic, one-to-one interviews and usability testing."
           }
         ],
         "exceptional": [
           {
             "id": "changed-requirements",
             "short-description": "The team changes their requirements based on research",
-            "description": "The team has changed its system requirements or scope due to insights from user research."
+            "description": "The project or programme has changed its system requirements or scope due to insights from user research."
           },
           {
             "id": "shared-user-needs",
             "short-description": "The team shares their discovered user needs widely",
-            "description": "The team has contributed discovered user needs to help other programmes or departments."
+            "description": "The project or programme has contributed discovered user needs to help other programmes or departments."
           }
         ]
       }
@@ -99,55 +63,57 @@
     {
       "number": 2,
       "title": "Make things accessible",
+      "keyquestion": "How has the project or programme made the technology project or programme accessible?",
+      "topic": "accessibility",
       "readmore": "https://www.gov.uk/guidance/make-things-accessible",
       "summary": "Make sure your technology, infrastructure and systems are accessible for users.",
       "prompts": [
-        "Have you involved users with a range of impairments in user testing?",
+        "Have you involved users with a range of accessibility needs in user testing?",
         "What range of devices do you need to work with your technology?",
         "Can users access your services in different web browsers?",
         "Is your service/system compatible with assistive technologies?"
       ],
       "antipatterns": [
-        "With JavaScript turned off, the service does not render or behave properly.",
-        "Accessibility has been evaluated based on a heuristic review of the service, but not actually tested with users.",
-        "The service team cites an expected standard, such as WCAG2 AA or AAA, without showing actual testing and mitigation of issues.",
-        "Administrative or internal user interfaces within the service are assumed to be exempt from accessibility requirements."
+        "The service does not render or behave properly when JavaScript is turned off.",
+        "Accessibility has been evaluated based on the project or programme’s investigation, but not actually tested with users.",
+        "The project or programme cites an expected standard, such as WCAG2 AA or AAA, without showing actual testing and mitigation of issues.",
+        "Assuming that administrative or internal user interfaces are exempt from accessibility requirements."
      ],
      "teambehaviours": {
         "expected": [
           {
             "id": "progressive-enhancement",
             "short-description": "Progressive enhancement",
-            "description": "User interfaces work well using standard HTML and CSS elements with broad compatibility, with advanced CSS or scripting functionality added progressively."
+            "description": "The project or programme has created user interfaces that work well using standard HTML and CSS elements. They are making progress on adding advanced CSS or scripting functionality."
           },
           {
             "id": "accessibility-audit",
             "short-description": "Accessibility Audit",
-            "description": "The team has engaged internal or external accessibility experts to evaluate accessibility issues specifically."
+            "description": "The project or programme is using internal or external accessibility experts to evaluate the project or programme for any accessibility issues."
           }
         ],
         "strong": [
           {
             "id": "act-on-accessibility",
             "short-description": "Accessibility impacts addressed",
-            "description": "The team has acted to mitigate all high-impact and most medium-impact accessiblity recommendations."
+            "description": "The project or programme has acted to mitigate all high-impact and most medium-impact accessibility recommendations."
           },
           {
             "id": "accessibility-expertise",
             "short-description": "Accessibility expertise",
-            "description": "The team contains at least one expert on accessibility issues, and all team members have undergone accessibility training."
+            "description": "The project or programme contains at least one expert on accessibility issues, and all members have completed accessibility training."
           }
         ],
         "exceptional": [
           {
             "id": "accessibility-user-panel",
             "short-description": "Accessibility user panel",
-            "description": "The team consistent tests the technology using a panel of users with accessibility needs."
+            "description": "The project or programme regularly test the technology with a panel of users with accessibility needs."
           },
           {
             "id": "accessibility-standards",
             "short-description": "Sets accessibility standards",
-            "description": "Creates and evangelises accessibility standards within and outside the organisation and actively participates in cross-government accessibility forums."
+            "description": "The project or programme creates and talks about accessibility standards both in and outside the organisation. They participate in cross-government accessibility forums."
           }
         ]
       }
@@ -155,60 +121,62 @@
     {
       "number": 3,
       "title": "Be open and use open source",
+      "keyquestion": "What actions has the project or programme taken to publish any code or use open source?",
+      "topic": "open source",
       "readmore": "https://www.gov.uk/guidance/be-open-and-use-open-source",
       "summary": "Publish your code and use open source to improve transparency, flexibility and accountability.",
       "prompts": [
-        "What are the solution’s initial and ongoing costs?",
-        "Will the staff need training or will expert users need to be employed to manage the solution?",
-        "If the solution is open source, how widely is the code already adopted? How mature is it?",
+        "How much is it going to cost to create and run the solution?",
+        "Will the staff need training or will you need to employ experts to manage the solution?",
+        "If you are using open source, how widely is the code already adopted? How mature is it?",
         "Does the solution offer the level of support needed?",
-        "How reliable is the solution? Assess it by looking at its maturity.",
-        "How well does the solution perform? Can you analyse performance data or reviews?",
+        "If you’re buying a solution, can you assess it’s reliability based on its maturity?",
+        "If you’re buying a solution, can you assess its performance based on data or reviews?",
         "Is the solution flexible?",
         "Will the solution work with your other technology?",
         "Is the solution’s <a href=\"https://opensource.org/licenses\" title=\"Open Source Licenses\" target=\"_blank\">licence</a> acceptable to your organisation’s business requirements?",
         "Is the solution’s warranty acceptable and is there an option to buy one?"
       ],
       "antipatterns": [
-        "Gaps in functionality or affordances have put off the team using an open source alternative, rather than re-examining needs or making needed extensions.",
-        "Code has been published, but only in a publication model, often without a full history, rather than actually working in the open.",
-        "General security principles have been used as a reason not to open at least some code, without looking specifically at exceptions."
+        "Project or programme members are unclear how they can use open source in their project or programme. They avoid using open source instead of examining how it can meet user needs and deliver the solution.",
+        "The project or programme has published its code but has not added history tracking or clear supporting documentation.",
+        "The project or programme has assumed that security reasons are preventing them from publishing some or all of their code without checking the security guidance and exceptions."
     ],
      "teambehaviours": {
         "expected": [
           {
             "id": "open-source-aware",
             "short-description": "Aware of open source alternatives",
-            "description": "Team has done a fair evaluation of of the open source landscape to see if there are already community-supported libraries or projects meeting the need."
+            "description": "The project or programme does fair evaluations of open source options to see if there are any that meet the needs of the project or programme."
           },
           {
             "id": "code-open-basic",
             "short-description": "Code in an open repo",
-            "description": "New code created by the programme is available in an open repository."
+            "description": "The project or programme makes new code created by the programme available in an open repository."
           }
         ],
         "strong": [
           {
             "id": "working-in-open",
             "short-description": "Working in the open",
-            "description": "Open repositories are clearly the ongoing day-to-day work of a development team, including commit histories, pull requests, etc."
+            "description": "The project or programme maintains open code repositories by using commit histories, pull requests and clear documentation."
           },
           {
             "id": "skills-modify",
             "short-description": "Skills to modify OSS",
-            "description": "Team has the skills and confidence to improve or adapt an open-source solution or platform as needed."
+            "description": "The project or programme members have the skills and confidence to improve or adapt an open-source solution or platform."
           }
         ],
         "exceptional": [
           {
             "id": "cotributes-shared",
             "short-description": "Contributes to shared platforms",
-            "description": "Team contributes to shared platforms used by others, either their own systems or cross-government services."
+            "description": "The project or programme contributes to shared platforms to help improve either their own systems so they are easier to use by others, or cross-government services."
           },
           {
             "id": "docs-as-code",
             "short-description": "Docs as code",
-            "description": "Documentation of the structure, logic and function of the system is complete, and is created and managed as code, versioned in synch with the underyling service code."
+            "description": "The project or programme publishes a complete set of documentation that is managed as code and kept in synch with the service code."
           }
         ]
       }
@@ -216,57 +184,57 @@
     {
       "number": 4,
       "title": "Make use of open standards",
+      "keyquestion": "How does the project or programme make use of open standards?",
+      "topic": "open standards",
       "readmore": "https://www.gov.uk/guidance/make-use-of-open-standards",
       "summary": "Build technology that uses open standards to ensure your technology works and communicates with other technology, and can easily be upgraded and expanded.",
       "prompts": [
         "Have you made use of <a href=\"https://www.gov.uk/government/publications/open-standards-principles/open-standards-principles\" title=\"Open Standards\" target=\"_blank\">open standards</a>, complying with any that are <a href=\"https://www.gov.uk/government/publications/open-standards-for-government\" title=\"Mandatory standards\" target=\"_blank\">compulsory for use in government</a>?",
         "Are you clear about what data your systems hold?",
-        "What are the identifiers in place to make sure the data can be used effectively?",
-        "How did you establish these identifiers?",
-        "How have you avoided duplication of data?",
-        "Are you clear about your approved source?",
+        "How do you avoid duplication of data?",
+        "Are you clear whether you are using the approved source of data rather than a copy or different version?",
         "How have you used <a href=\"http://restfulapi.net\" title=\"Rest APIs\" target=\"_blank\">RESTful APIs</a> for integration where possible?",
-        "How have you considered the benefits of flexibility in your technology?"
+        "Have you considered if your technology has the flexibility for you to move it to other systems or services?"
       ],
       "antipatterns": [
-        "Have not done any meaningful survey of standards for data, APIs, or common identifiers in the space.",
-        "Machine-to-machine communications cannot be encoded using human-readable formats."
+        "The project or programme has not investigated whether they can use standards for data, APIs, or common identifiers.",
+        "The project or programme is using machine-to-machine communications that they cannot encode using human-readable formats."
     ],
     "teambehaviours": {
         "expected": [
           {
-            "id": "",
-            "short-description": "",
-            "description": ""
+            "id": "using-mandatory-standards",
+            "short-description": "Using mandatory open standards",
+            "description": "The project or programme is using applicable open standards that are mandatory for government use."
           },
           {
-            "id": "",
-            "short-description": "",
-            "description": ""
+            "id": "appropriate-open-standards",
+            "short-description": "Selects appropriate open standards to meet user needs",
+            "description": "The project or programme selects the open standards that meet their users’ needs and either implement them or lists them in the requirements to their supplier."
           }
         ],
         "strong": [
           {
-            "id": "",
-            "short-description": "",
-            "description": ""
+            "id": "open-data",
+            "short-description": "Makes data as open as possible",
+            "description": "The project or programme uses open standards to make their data as open as possible."
           },
           {
-            "id": "",
-            "short-description": "",
-            "description": ""
+            "id": "standards-futureproof",
+            "short-description": "Uses open standards to be compatible with future technology changes",
+            "description": "The project or programme uses open standards that are compatible with any future technology upgrades."
           }
         ],
         "exceptional": [
           {
-            "id": "",
-            "short-description": "",
-            "description": ""
+            "id": "promotes-standards",
+            "short-description": "Promotes open standards",
+            "description": "The project or programme promotes the use of open standards."
           },
           {
-            "id": "",
-            "short-description": "",
-            "description": ""
+            "id": "contributes-standards",
+            "short-description": "Contributes to development of open standards",
+            "description": "The project or programme contributes to the development of open standards."
           }
         ]
       }
@@ -274,45 +242,47 @@
     {
       "number": 5,
       "title": "Use cloud first",
+      "keyquestion": "How is the project or programme using cloud-based technology?",
+      "topic": "the cloud first policy",
       "readmore": "https://www.gov.uk/guidance/use-cloud-first",
       "summary": "Use public cloud first as stated in the government’s cloud first policy.",
       "prompts": [
-        "How have you evaluated potential <a href=\"https://www.gov.uk/guidance/how-to-assess-a-hosting-business-case\" title=\"Assessing a hosting business case\" target=\"_blank\">public cloud services</a> before considering alternatives such as data centres?",
+        "How do you evaluate potential <a href=\"https://www.gov.uk/guidance/how-to-assess-a-hosting-business-case\" title=\"Assessing a hosting business case\" target=\"_blank\">public cloud services</a> before considering alternatives such as data centres?",
         "Can you demonstrate that your chosen service represents the best value for money?",
         "Have you been in contact with the GOV.UK PaaS team about the hosting requirements for the service?"
       ],
       "antipatterns": [
-        "A 'private cloud' has been used without a specific regulatory or security justification.",
-        "Though a public cloud is being used (probably AWS, Azure or Google Cloud), the team uses generic compute boxes without taking advantage of specfic cloud components",
-        "There are multiple accounts for the same cloud provider within the organisation with no shared components such as identity management, logging or security infrastructure.",
-        "On-premise servers remain, with no planning to shift to either Crown Hosting or to a virtualised cloud environment.",
-        "The team either has not considered GOV.UK PaaS for hosting or dismisses it as 'not production ready' with no specific justification."
+        "The project or programme is using a 'private cloud' without regulatory or security justification.",
+        "Although the project or programme is using a public cloud (for example, AWS, Azure or Google Cloud), they use the generic service without taking advantage of specific cloud components.",
+        "The organisation has multiple accounts with the same cloud provider and does not share components such as identity management, log-in or security infrastructure.",
+        "The organisation still has on-premise servers and does not have a plan to use either Crown Hosting or a virtualised cloud environment.",
+        "The project or programme does not consider using GOV.UK PaaS for hosting or dismisses using it with no justification."
       ],
       "teambehaviours": {
         "expected": [
           {
             "id": "cost-benefit",
             "short-description": "cost benefit",
-            "description": "Any team selecting an alternative to the cloud can demonstrate it offers better value for money."
+            "description": "The project or programme can demonstrate that the alternative to the cloud they have selected offers better value for money."
           },
           {
             "id": "SasS-options",
             "short-description": "Consider SaaS options",
-            "description": "The team can show they have considered possible SaaS solutions before proposing bespoke developments."
+            "description": "The project or programme can show they have considered possible SaaS (software as a service) solutions before proposing bespoke developments."
           }
         ],
         "strong": [
           {
             "id": "public-cloud",
             "short-description": "Public cloud first",
-            "description": "The team can demonstrate they have evaluated GOV.UK PaaS offering in addition to the major cloud providers."
+            "description": "The project or programme can demonstrate that they have evaluated GOV.UK PaaS as a potential provider in addition to other cloud providers."
           }
         ],
         "exceptional": [
           {
             "id": "evolving technology",
             "short-description": "Evolving cloud technologies",
-            "description": "The team has embraced advances in cloud technology (e.g containerization) to improve their solution."
+            "description": "The project or programme has made us of advances in cloud technology (for example, containerisation) to improve their solution."
           }
         ]
       }
@@ -320,6 +290,8 @@
     {
       "number": 6,
       "title": "Make things secure",
+      "keyquestion": "What actions has the project or programme taken to add the appropriate security?",
+      "topic": "security",
       "readmore": "https://www.gov.uk/guidance/make-things-secure",
       "summary": "Keep systems and data safe with the appropriate level of security.",
       "prompts": [
@@ -334,6 +306,8 @@
     {
       "number": 7,
       "title": "Make privacy integral",
+      "keyquestion": "How has the project or programme made privacy integral?",
+      "topic": "privacy",
       "readmore": "https://www.gov.uk/guidance/make-privacy-integral",
       "summary": "Make sure citizens’ rights are protected by integrating privacy as an essential part of your system.",
       "prompts": [
@@ -350,6 +324,8 @@
     {
       "number": 8,
       "title": "Share and reuse technology",
+      "keyquestion": "How has the project or programme made their technology shareable and reusable?",
+      "topic": "sharing and reusing",
       "readmore": "https://www.gov.uk/guidance/share-and-reuse-technology",
       "summary": "Promote good practice and avoid duplicated efforts by sharing and reusing services, data and software components.",
       "prompts": [
@@ -364,6 +340,8 @@
     {
       "number": 9,
       "title": "Integrate and adapt technology",
+      "keyquestion": "How has the project or programme integrated and adapted their technology?",
+      "topic": "integration and adaptation",
       "readmore": "https://www.gov.uk/guidance/integrate-and-adapt-technology",
       "summary": "Your technology should work with existing technologies, processes and infrastructure in your organisation, and adapt to future demands.",
       "prompts": [
@@ -378,6 +356,8 @@
     {
       "number": 10,
       "title": "Make better use of data",
+      "keyquestion": "How is your project or programme using data?",
+      "topic": "data",
       "readmore": "https://www.gov.uk/guidance/make-better-use-of-data",
       "summary": "Consider how to minimise data collection and reuse data to avoid duplication of datasets.",
       "prompts": [
@@ -394,6 +374,8 @@
     {
       "number": 11,
       "title": "Define your purchasing strategy",
+      "keyquestion": "How is your project or programme defining the purchasing strategy?",
+      "topic": "purchasing",
       "readmore": "https://www.gov.uk/guidance/define-your-purchasing-strategy",
       "summary": "Your purchasing strategy must show you’ve considered commercial and technology aspects, and contractual limitations.",
       "prompts": [

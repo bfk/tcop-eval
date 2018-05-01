@@ -10,17 +10,20 @@
       <h1 class="heading-xlarge">
         Point {{ thispoint.number }}. {{ thispoint.title }}
       </h1>
-      <p class="body-text">
+      <p class="lede">
         {{ thispoint.summary }}
       </p>
       <p class="body-text">
-        <a href="{{ thispoint.readmore }}" target="_blank">Read more about point {{ thispoint.number }}</a>
+        <a href="{{ thispoint.readmore }}" target="_blank">Read more about {{ thispoint.topic }} in the Technology Code of Practice</a>
       </p>
-      
+
+      <h2 class="heading-medium">
+        {{ thispoint.keyquestion }}
+      </h2>
 
       {% if thispoint.prompts %}
       <details>
-        <summary><span class="summary">Prompts to consider</span></summary>
+        <summary><span class="summary">Questions to consider</span></summary>
         <div class="panel panel-border-narrow">
           {% for prompt in thispoint.prompts %}
           <p>{{ prompt | safe }}</p>
@@ -31,7 +34,7 @@
 
       {% if thispoint.antipatterns %}
       <details>
-        <summary><span class="summary">Anti-patterns</span></summary>
+        <summary><span class="summary">Things to avoid</span></summary>
         <div class="panel panel-border-narrow">
           {% for pattern in thispoint.antipatterns %}
           <p>{{ pattern | safe }}</p>
@@ -47,14 +50,11 @@
           <fieldset>
 
             <legend>
-              <h1 class="heading-medium">
-                What team behaviours have you observed in relation to Point {{ pointnum }}?
-              </h1>
-              <span class="body-text">Select all behaviours that you have seen.</span>
+              <span class="body-text">Select all the statements that apply.</span>
             </legend>
 
             <h3 class="heading-small">
-              Expected team behaviours
+              Expected actions
             </h3>
             {% for behaviour in config.tcop.points[pointnum-1].teambehaviours.expected %}
             <div class="multiple-choice">
@@ -64,7 +64,7 @@
             {% endfor %}
 
             <h3 class="heading-small">
-              Strong team behaviours
+              Strong actions
             </h3>
             {% for behaviour in thispoint.teambehaviours.strong %}
             <div class="multiple-choice">
@@ -74,7 +74,7 @@
             {% endfor %}
 
             <h3 class="heading-small">
-              Exceptional team behaviours
+              Exceptional actions
             </h3>
             {% for behaviour in thispoint.teambehaviours.exceptional %}
             <div class="multiple-choice">
@@ -108,20 +108,20 @@
             </div>
 
           </fieldset>
-          
+
             <h3 class="heading-small">
-              Observations
+              Comments
             </h3>
 
-              <label class="form-label" for="point{{pointnum}}-other-behaviour-description">Other observations relating to Point {{ pointnum }}</label>
+              <label class="form-label" for="point{{pointnum}}-other-behaviour-description">Add any other information about the project or programme’s work on {{ thispoint.topic }} that you feel is useful to include.</label>
               <textarea class="form-control form-control-3-4" id="point{{pointnum}}-other-behaviour-description" name="point{{pointnum}}-other-behaviour-description" rows="5">{{data['point' + pointnum + '-other-behaviour-description']}}</textarea>
 
         </div>
 
         <div class="form-group">
-          <input class="button" type="submit" value="Continue to {{ 'Point ' + (pointnum+1) if pointnum < config.tcop.points.length else 'Summary' }}">
+          <input class="button" type="submit" value="Go to {{ 'the next question' if pointnum < config.tcop.points.length else 'the summary' }}">
           <p>
-            <a href="/tcop-answers" title="Evaluation summary">Skip to Summary</a>
+            <a href="/tcop-answers" title="Evaluation summary">Go straight to the summary</a>
           </p>
         </div>
 
