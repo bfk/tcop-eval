@@ -94,16 +94,16 @@
             </legend>
 
             <div class="multiple-choice">
-              <input id="point-summary-fine" type="radio" name="point{{ pointnum }}-point-summary" value="All fine" {{ checked("point"+pointnum+"-point-summary", "All fine") }}>
+              <input id="point-summary-fine" type="radio" name="point{{ pointnum }}-point-summary" value="No problems" {{ checked("point"+pointnum+"-point-summary", "No problems") }}>
               <label for="point-summary-fine">All fine</label>
             </div>
             <div class="multiple-choice">
-              <input id="point-summary-issues" type="radio" name="point{{ pointnum }}-point-summary" value="Some issues" {{ checked("point"+pointnum+"-point-summary", "Some issues") }}>
+              <input id="point-summary-issues" type="radio" name="point{{ pointnum }}-point-summary" value="Some problems" {{ checked("point"+pointnum+"-point-summary", "Some problems") }}>
               <label for="point-summary-issues">Some issues</label>
             </div>
             <p class="form-block">or</p>
             <div class="multiple-choice">
-              <input id="point-summary-tricky" type="radio" name="point{{ pointnum }}-point-summary" value="Tricky issues" {{ checked("point"+pointnum+"-point-summary", "Tricky issues") }}>
+              <input id="point-summary-tricky" type="radio" name="point{{ pointnum }}-point-summary" value="Complex problems" {{ checked("point"+pointnum+"-point-summary", "Complex problems") }}>
               <label for="point-summary-tricky">Tricky issues</label>
             </div>
 
