@@ -301,7 +301,45 @@
         "Have you followed the National Cyber Security Centre’s <a href=\"https://www.ncsc.gov.uk/guidance/risk-management-collection\" title=\"Information risk management guidance\" target=\"_blank\">information risk management guidance</a>?",
         "How have you designed and implemented the components of your system according to government best practice?",
         " How have you determined the security requirements of cloud services using the <a href=\"https://www.ncsc.gov.uk/guidance/implementing-cloud-security-principles\" title=\"Cloud security principles\" target=\"_blank\">Cloud security principles</a> and <a href=\"https://www.ncsc.gov.uk/guidance/cloud-security-collection\" title=\"Cloud security guidance\" target=\"_blank\">accompanying guidance</a>?"
-      ]
+      ],
+      "teambehaviours": {
+        "expected": [
+          {
+            "id": "security-appropriate",
+            "short-description": "Appropriate level of security",
+            "description": "The project or programme can demonstrate how they are implementing the appropriate level of security."
+          },
+          {
+            "id": "security-documented",
+            "short-description": "Well-documented security",
+            "description": "The project or programme provide well-documented security processes and make sure that all relevant staff members use them."
+          }
+        ],
+        "strong": [
+          {
+            "id": "security-mttr",
+            "short-description": "Improving Mean Time To Recovery",
+            "description": "The project or programme has processes in place to improve the mean time to recovery in addition to the regular processes."
+          },
+          {
+            "id": "security-ncsc",
+            "short-description": "Follows NCSC guidance",
+            "description": "The project or programme can provide evidence of how they are following security guidance from the NCSC."
+          }
+        ],
+        "exceptional": [
+          {
+            "id": "security-interactions",
+            "short-description": "Taken into account interactions with other systems",
+            "description": "The project or programme has taken into account interactions with other services and systems and where necessary made suggestions for improvements to the security interactions."
+          },
+          {
+            "id": "security-reusable",
+            "short-description": "Creating reusable security components",
+            "description": "The project or programme is using or has created, reusable security components."
+          }
+        ]
+      }
     },
     {
       "number": 7,
@@ -319,7 +357,40 @@
         "Does the project or programme involve you using new technology that might be perceived as being privacy intrusive? For example, the use of biometrics or facial recognition?",
         "Is the information about individuals of a kind particularly likely to raise privacy concerns or expectations? For example, health records, that people would consider to be private?",
         "Will the project or programme require you to contact individuals in ways that they may find intrusive?"
-      ]
+      ],
+      "teambehaviours": {
+        "expected": [
+          {
+            "id": "privacy-gdpr",
+            "short-description": "Complies with the General Data Protection Regulation",
+            "description": "The project or programme must comply with the General Data Protection Regulation (GDPR)."
+          },
+          {
+            "id": "privacy-clear",
+            "short-description": "Clear on how to collect, use and store personal data",
+            "description": "The project or programme must clear about how they will collect, use and store any personal data."
+          }
+        ],
+        "strong": [
+          {
+            "id": "privacy-evaluatesgdpr",
+            "short-description": "Uses a variety of methods to evaluate compliance with General Data Protection Regulation (GDPR)",
+            "description": "The project or programme uses a variety of methods to evaluate their performance in complying with GDPR, such as user stories, information risk assessments and data protection impact assessments."
+          },
+          {
+            "id": "privacy-newtools",
+            "short-description": "Evaluates new tools to comply with GDPR",
+            "description": "The project or programme evaluates new technology tools to make sure they also comply with GDPR."
+          }
+        ],
+        "exceptional": [
+          {
+            "id": "privacy-teaches",
+            "short-description": "Teaches others about compliance with GDPR",
+            "description": "The project or programme use their experiences to teach other parts of the organisation about how to comply with GDPR."
+          }
+        ]
+      }
     },
     {
       "number": 8,
@@ -335,7 +406,45 @@
         "Have you shared or reused documentation from other discoveries, if so, what?",
         "What existing services both in and out of government have you considered using?",
         "How have you made your solution open for reuse?"
-      ]
+      ],
+      "teambehaviours": {
+        "expected": [
+          {
+            "id": "reuse-considered",
+            "short-description": "Considered elements for reuse",
+            "description": "The project or programme can show that they have considered if there are any elements they can reuse or share so that others can reuse."
+          },
+          {
+            "id": "reuse-govplatforms",
+            "short-description": "Have considered common government platforms",
+            "description": "The project or programme can show they have considered using government platforms and common technology."
+          }
+        ],
+        "strong": [
+          {
+            "id": "reuse-usinggovplatforms",
+            "short-description": "Using government platforms and common technology",
+            "description": "The project or programme is using government platforms and common technology."
+          },
+          {
+            "id": "reuse-open",
+            "short-description": "Is open to allow for potential technology sharing",
+            "description": "The project or programme is as open as possible to allow for potential technology sharing."
+          }
+        ],
+        "exceptional": [
+          {
+            "id": "reuse-promotes",
+            "short-description": "Promotes reusable elements",
+            "description": "The project or programme promotes the reusable elements to encourage other teams to share and reuse technology."
+          },
+          {
+            "id": "reuse-aggregatecrown",
+            "short-description": "Investigated commercial aggregation opportunities",
+            "description": "The project or programme has investigated commercial aggregation opportunities with the Crown Commercial Service."
+          }
+        ]
+      }
     },
     {
       "number": 9,
@@ -351,7 +460,45 @@
         "How thorough is the map of your technology infrastructure?",
         "Do you have a plan for integrating or modernising legacy systems?",
         "Is it possible for your technology to work with legacy or newer systems?"
-      ]
+      ],
+      "teambehaviours": {
+        "expected": [
+          {
+            "id": "integration-plans",
+            "short-description": "Has integration plans based on the IT operating model",
+            "description": "The project or programme has integration plans based on the organisation’s IT operating model, including business processes, governance, service support and service delivery."
+          },
+          {
+            "id": "integration-flexible",
+            "short-description": "Flexible approach to integration",
+            "description": "The project or programme has a flexible approach to integration so that the system or service can incorporate legacy and new infrastructure, including the use of cloud services."
+          }
+        ],
+        "strong": [
+          {
+            "id": "integration-skills",
+            "short-description": "Has a skills and capabilities training plan",
+            "description": "The project or programme has a skills and capabilities training plan."
+          },
+          {
+            "id": "integration-stress",
+            "short-description": "Runs regular integration and stress testing",
+            "description": "The project or programme regular integration and stress testing to make sure the system remains robust."
+          }
+        ],
+        "exceptional": [
+          {
+            "id": "integration-continuous",
+            "short-description": "Uses a continuous improvement model.",
+            "description": "The project or programme is using a continuous improvement model."
+          },
+          {
+            "id": "integration-interdependencies",
+            "short-description": "Tracks interdependencies between infrastructure and services",
+            "description": "The project or programme tracks the interdependencies between the infrastructure and the services running on it."
+          }
+        ]
+      }
     },
     {
       "number": 10,
@@ -369,7 +516,40 @@
         "How have you made newly collected data easily accessible?",
         "What common standards and patterns have you used to ensure data can be easily analysed?",
         "How does your solution align with best practices for collecting, storing, analysing and sharing data?"
-      ]
+      ],
+      "teambehaviours": {
+        "expected": [
+          {
+            "id": "data-guidance",
+            "short-description": "Follows current guidance and best practices for data",
+            "description": "The project or programme follows the current guidance and best practices for managing data."
+          },
+          {
+            "id": "data-open",
+            "short-description": "Data is open by default and follows open data principles",
+            "description": "The project or programme makes their data <a href=\"https://www.gov.uk/government/publications/open-data-white-paper-unleashing-the-potential\">open by default</a> and follows the <a href=\"https://opendatacharter.net/\">open data principles</a> when publishing data."
+          }
+        ],
+        "strong": [
+          {
+            "id": "data-standards",
+            "short-description": "Uses common standards and platforms for data",
+            "description": "The project or programme uses common standards and platforms to make their data easier to analyse in a consistent way."
+          },
+          {
+            "id": "data-api",
+            "short-description": "Collection and storage of data is accessible by API",
+            "description": "The project or programme has a plan for the collection and storage of new data that makes it accessible for use by APIs."
+          }
+        ],
+        "exceptional": [
+          {
+            "id": "data-retention",
+            "short-description": "Has a strategy to retain data only as long as necessary",
+            "description": "The project or programme has a strategy for assessing the data they have and only keeping it for as long as necessary, and securely deleting the data when it’s no longer needed."
+          }
+        ]
+      }
     },
     {
       "number": 11,
@@ -380,13 +560,51 @@
       "summary": "Your purchasing strategy must show you’ve considered commercial and technology aspects, and contractual limitations.",
       "prompts": [
         "Are commercial products and opportunities competitive and innovative?",
-        "What are your long-term financial savings?",
+        "Do you know your forecasted long-term financial savings?",
         "Do you have good supplier relations?",
         "What is your commercial approach and how does it support the disaggregation of contracts?",
         "How does your strategy help with the transition to the cloud, commodity and common technology services?",
-        "How does your strategy support  shorter, more manageable contracts with a streamlined renewal process?",
-        "Do you have a clearer view of contract status, risks and issues? Can you explain this?"
-      ]
+        "How does your strategy support shorter, more manageable contracts with a streamlined renewal process?",
+        "Do you have a clear view of contract status, risks and issues?"
+      ],
+      "teambehaviours": {
+        "expected": [
+          {
+            "id": "",
+            "short-description": "",
+            "description": "The project or programme works closely with a commercial team to identify the best products and components to purchase."
+          },
+          {
+            "id": "",
+            "short-description": "",
+            "description": "The project or programme uses off the shelf products and services where possible to avoid making customised products."
+          }
+        ],
+        "strong": [
+          {
+            "id": "",
+            "short-description": "",
+            "description": "The project or programme has a sourcing strategy that includes a plan for managing multiple suppliers."
+          },
+          {
+            "id": "",
+            "short-description": "",
+            "description": "The project or programme has a plan that shows where and how they have disaggregated the technology they are using, and the contracts that supply the technology."
+          }
+        ],
+        "exceptional": [
+          {
+            "id": "",
+            "short-description": "",
+            "description": "The project or programme regularly considers whether the requirements in their sourcing strategy can be simplified or broken up to allow for greater competition in the marketplace, including by small and medium-sized enterprises."
+          },
+          {
+            "id": "",
+            "short-description": "",
+            "description": "The project or programme uses technology components that complying with the <a href=\"https://www.gov.uk/government/collections/greening-government-commitments\">Greening Government Commitments</a> to reduce their environmental impact."
+          }
+        ]
+      }
     },
     {
       "number": 12,

@@ -43,14 +43,16 @@
       </details>
       {% endif %}
 
-      <!-- Copied from https://govuk-elements.herokuapp.com/form-elements/#form-toggle-content-checkboxes -->
 
       <form action="{{ '/point/' + (pointnum+1) if pointnum < config.tcop.points.length else '/tcop-answers'}}" method="post" class="form">
+
+        {% if config.tcop.points[pointnum-1].teambehaviours.expected or thispoint.teambehaviours.strong or thispoint.teambehaviours.exceptional %}
+
         <div class="form-group">
           <fieldset>
 
             <legend>
-              <span class="body-text">Select all the statements that apply.</span>
+              <span class="body-text"><br />Select all the statements that apply.</span>
             </legend>
 
             <h3 class="heading-small">
@@ -59,7 +61,7 @@
             {% for behaviour in config.tcop.points[pointnum-1].teambehaviours.expected %}
             <div class="multiple-choice">
               <input id="point{{pointnum}}-teambehaviours-{{behaviour.id}}" name="point{{ thispoint.number }}-teambehaviours" type="checkbox" value="{{behaviour.description}}" {{ checked("point"+thispoint.number+"-teambehaviours", behaviour.description) }}>
-              <label for="point{{pointnum}}-teambehaviours-{{behaviour.id}}">{{behaviour.description}}</label>
+              <label for="point{{pointnum}}-teambehaviours-{{behaviour.id}}">{{behaviour.description | safe }}</label>
             </div>
             {% endfor %}
 
@@ -69,7 +71,7 @@
             {% for behaviour in thispoint.teambehaviours.strong %}
             <div class="multiple-choice">
               <input id="point{{pointnum}}-teambehaviours-{{behaviour.id}}" name="point{{ thispoint.number }}-teambehaviours" type="checkbox" value="{{behaviour.description}}" {{ checked("point"+thispoint.number+"-teambehaviours", behaviour.description) }}>
-              <label for="point{{pointnum}}-teambehaviours-{{behaviour.id}}">{{behaviour.description}}</label>
+              <label for="point{{pointnum}}-teambehaviours-{{behaviour.id}}">{{behaviour.description | safe }}</label>
             </div>
             {% endfor %}
 
@@ -79,32 +81,34 @@
             {% for behaviour in thispoint.teambehaviours.exceptional %}
             <div class="multiple-choice">
               <input id="point{{pointnum}}-teambehaviours-{{behaviour.id}}" name="point{{ thispoint.number }}-teambehaviours" type="checkbox" value="{{behaviour.description}}" {{ checked("point"+thispoint.number+"-teambehaviours", behaviour.description) }}>
-              <label for="point{{pointnum}}-teambehaviours-{{behaviour.id}}">{{behaviour.description}}</label>
+              <label for="point{{pointnum}}-teambehaviours-{{behaviour.id}}">{{behaviour.description | safe }}</label>
             </div>
             {% endfor %}
 
           </fieldset>
         </div>
 
+        {% endif %}
+
         <div class="form-group">
           <fieldset>
 
             <legend>
-              <h1 class="heading-medium">Overall summary of Point {{pointnum}} </h1>
+              <h2 class="heading-medium">How would you summarise your progress in this area?</h2>
             </legend>
 
             <div class="multiple-choice">
               <input id="point-summary-fine" type="radio" name="point{{ pointnum }}-point-summary" value="No problems" {{ checked("point"+pointnum+"-point-summary", "No problems") }}>
-              <label for="point-summary-fine">All fine</label>
+              <label for="point-summary-fine">No problems</label>
             </div>
             <div class="multiple-choice">
               <input id="point-summary-issues" type="radio" name="point{{ pointnum }}-point-summary" value="Some problems" {{ checked("point"+pointnum+"-point-summary", "Some problems") }}>
-              <label for="point-summary-issues">Some issues</label>
+              <label for="point-summary-issues">Some problems</label>
             </div>
             <p class="form-block">or</p>
             <div class="multiple-choice">
               <input id="point-summary-tricky" type="radio" name="point{{ pointnum }}-point-summary" value="Complex problems" {{ checked("point"+pointnum+"-point-summary", "Complex problems") }}>
-              <label for="point-summary-tricky">Tricky issues</label>
+              <label for="point-summary-tricky">Complex problems</label>
             </div>
 
           </fieldset>
