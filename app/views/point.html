@@ -1,4 +1,7 @@
-{% extends "layout.html" %} {% block page_title %}Point {{ config.tcop.points[pointnum-1].number }}. {{ config.tcop.points[pointnum-1].title }} {% endblock %} {% block content %}
+{% extends "layout.html" %}
+{% block page_title %}Point {{ config.tcop.points[pointnum-1].number }}. {{ config.tcop.points[pointnum-1].title }}
+{% endblock %}
+{% block content %}
 {% set thispoint = config.tcop.points[pointnum-1] %}
 
 <main id="content" role="main">
@@ -8,7 +11,7 @@
       <a class="link-back" href="/start-page">Back to start</a>
 
       <h1 class="heading-xlarge">
-        Point {{ thispoint.number }}. {{ thispoint.title }}
+        {{ thispoint.number }}. {{ thispoint.title }}
       </h1>
       <p class="lede">
         {{ thispoint.summary }}
@@ -60,7 +63,7 @@
             </h3>
             {% for behaviour in config.tcop.points[pointnum-1].teambehaviours.expected %}
             <div class="multiple-choice">
-              <input id="point{{pointnum}}-teambehaviours-{{behaviour.id}}" name="point{{ thispoint.number }}-teambehaviours" type="checkbox" value="{{behaviour.description}}" {{ checked("point"+thispoint.number+"-teambehaviours", behaviour.description) }}>
+              <input id="point{{pointnum}}-teambehaviours-{{behaviour.id}}" name="point{{ thispoint.number }}-teambehaviours-expected" type="checkbox" value="{{behaviour.description}}" {{ checked("point"+thispoint.number+"-teambehaviours-expected", behaviour.description) }}>
               <label for="point{{pointnum}}-teambehaviours-{{behaviour.id}}">{{behaviour.description | safe }}</label>
             </div>
             {% endfor %}
@@ -70,7 +73,7 @@
             </h3>
             {% for behaviour in thispoint.teambehaviours.strong %}
             <div class="multiple-choice">
-              <input id="point{{pointnum}}-teambehaviours-{{behaviour.id}}" name="point{{ thispoint.number }}-teambehaviours" type="checkbox" value="{{behaviour.description}}" {{ checked("point"+thispoint.number+"-teambehaviours", behaviour.description) }}>
+              <input id="point{{pointnum}}-teambehaviours-{{behaviour.id}}" name="point{{ thispoint.number }}-teambehaviours-strong" type="checkbox" value="{{behaviour.description}}" {{ checked("point"+thispoint.number+"-teambehaviours-strong", behaviour.description) }}>
               <label for="point{{pointnum}}-teambehaviours-{{behaviour.id}}">{{behaviour.description | safe }}</label>
             </div>
             {% endfor %}
@@ -80,7 +83,7 @@
             </h3>
             {% for behaviour in thispoint.teambehaviours.exceptional %}
             <div class="multiple-choice">
-              <input id="point{{pointnum}}-teambehaviours-{{behaviour.id}}" name="point{{ thispoint.number }}-teambehaviours" type="checkbox" value="{{behaviour.description}}" {{ checked("point"+thispoint.number+"-teambehaviours", behaviour.description) }}>
+              <input id="point{{pointnum}}-teambehaviours-{{behaviour.id}}" name="point{{ thispoint.number }}-teambehaviours-exceptional" type="checkbox" value="{{behaviour.description}}" {{ checked("point"+thispoint.number+"-teambehaviours-exceptional", behaviour.description) }}>
               <label for="point{{pointnum}}-teambehaviours-{{behaviour.id}}">{{behaviour.description | safe }}</label>
             </div>
             {% endfor %}
@@ -123,7 +126,7 @@
         </div>
 
         <div class="form-group">
-          <input class="button" type="submit" value="Go to {{ 'the next question' if pointnum < config.tcop.points.length else 'the summary' }}">
+          <input class="button" type="submit" value="Save and go to {{ 'the next question' if pointnum < config.tcop.points.length else 'the summary' }}">
           <p>
             <a href="/tcop-answers" title="Evaluation summary">Go straight to the summary</a>
           </p>
@@ -147,12 +150,14 @@
       <div class="column-third">
 
       <aside class="govuk-related-items" role="complementary">
-        <h2 class="heading-medium" id="subsection-title">Jump to section</h2>
+        <h2 class="heading-medium" id="subsection-title">Jump to</h2>
         <nav role="navigation" aria-labelledby="subsection-title">
           <ul class="font-xsmall">
+            <li><a href="/settings">Configuration page</a></li>
             {% for point in config.tcop.points %}
             <li><a href="/point/{{ point.number }}">{{ point.number + '. ' + point.title }}</a></li>
             {% endfor %}
+            <li><a href="/tcop-answers" title="Evaluation summary">Evaluation summary</a></li>
           </ul>
         </nav>
       </aside>

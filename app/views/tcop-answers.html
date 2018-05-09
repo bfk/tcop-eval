@@ -12,94 +12,158 @@
       <div class="notice">
         <i class="icon icon-important"><span class="visually-hidden">Warning</span></i>
         <strong class="bold-small">
-        This service does not store any of your evaluation permanently. To keep the evaluation you need to download it. You can also send the evaluation by email.
-  </strong>
+          This service does not store any of your evaluation permanently. To keep the evaluation you need to download it. You can also send the evaluation by email.
+        </strong>
       </div>
 
       <h3 class="heading-medium">Project strengths</h3>
 
       <ul class="list list-bullet">
-      	<li>Point 1: Define user needs</li>
-      	<li>Point 2: Make things accessible</li>
-	  </ul>
+        <li>Point 1: Define user needs</li>
+        <li>Point 2: Make things accessible</li>
+      </ul>
 
       <h3 class="heading-medium">Areas to explore</h3>
 
       <ul class="list list-bullet">
-      	<li>Point 3: Be open and use open source</li>
-      	<li>Point 4: Make use of open standards</li>
-	  </ul>
+        <li>Point 3: Be open and use open source</li>
+        <li>Point 4: Make use of open standards</li>
+      </ul>
 
       {% for point in config.tcop.points %}
+      {% set behavioursDefined = (data['point' + point.number + '-teambehaviours-expected'].length > 0) or (data['point' + point.number + '-teambehaviours-strong'].length > 0) or (data['point' + point.number + '-teambehaviours-exceptional'].length > 0) %}
 
-      {% if (data['point' + point.number + '-teambehaviours'].length > 0) or data['point' + point.number + '-other-behaviour-description'] or data['point' + point.number + '-point-summary'] %}
+      {% if behavioursDefined or data['point' + point.number + '-other-behaviour-description'] or data['point' + point.number + '-point-summary'] %}
 
-		<table class="check-your-answers">
-          <thead>
-            <tr>
-              <th colspan="2">
-                <h2 class="heading-medium">
-                  Point {{ point.number }}: <a href='{{ point.readmore }}' title='{{ point.title }}' target='_blank'>{{ point.title }}</a></h4>
-                </h2>
-                <p class="font-xsmall">{{ point.summary }}</p>
-              </th>
-              <th class="change-answer">
-                	<a href="/point/{{ point.number }}">
-	                  Change <span class="visuallyhidden">point {{ point.number }}</span>
-    	            </a>
-              </th>
-            </tr>
-          </thead>
+      <table class="check-your-answers">
+        <thead>
+          <tr>
+            <th colspan="2">
+              <h2 class="heading-medium">
+                {{ point.number }}. <a href="/point/{{ point.number }}" title="{{ point.title }}">{{ point.title }}</a></h4>
+              </h2>
+              <p class="font-xsmall">{{ point.summary }}</p>
+            </th>
+            <th class="change-answer">
+              <a href="/point/{{ point.number }}">
+                Change <span class="visuallyhidden">point {{ point.number }}</span>
+              </a>
+            </th>
+          </tr>
+        </thead>
 
-          <tbody>
-          {% if data['point' + point.number + '-teambehaviours'].length > 0 %}
-            <tr>
-              <td>
-                Positive signs
-              </td>
-              <td>
-				<ul class="list list-bullet">
-        		    {% for thing in data['point' + point.number + '-teambehaviours'] %}
-	                	<li>{{ thing }}</li>
-    		        {% else %}
-            		    <li>No specific behaviours recorded</li>
-		            {% endfor %}
-				</ul>
-              </td>
-              <td>
-              </td>
-            </tr>
-        {% endif %}
+        <tbody>
+          {% if behavioursDefined %}
+          <tr>
+            <td>
+              Positive signs
+            </td>
+            <td>
+              {% if data['point' + point.number + '-teambehaviours-expected'].length > 0 %}
+                <p>Expected actions:</p>
+                <ul class="list list-bullet">
+                  {% for thing in data['point' + point.number + '-teambehaviours-expected'] %}
+                    <li>{{ thing }}</li>
+                  {% endfor %}
+                </ul>
+              {% endif %}
 
-        {% if data['point' + point.number + '-other-behaviour-description'] %}
-            <tr>
-            	<td>
-            		Observations
-            	</td>
-            	<td>
-            		<p class="font-xsmall">{{ data['point' + point.number + '-other-behaviour-description'] }}</p>
-            	</td>
-            	<td>
-            	</td>
-            </tr>
-        {% endif %}
+              {% if data['point' + point.number + '-teambehaviours-strong'].length > 0 %}
+                <p>Strong actions:</p>
+                <ul class="list list-bullet">
+                  {% for thing in data['point' + point.number + '-teambehaviours-strong'] %}
+                    <li>{{ thing }}</li>
+                  {% endfor %}
+                </ul>
+              {% endif %}
 
-        {% if data['point' + point.number + '-point-summary'] %}
-            <tr>
-            	<td>
-            		Overall
-            	</td>
-            	<td>
-            		{{ data['point' + point.number + '-point-summary'] }}
-            	</td>
-              	<td></td>
-			</tr>
-		{% endif %}
+              {% if data['point' + point.number + '-teambehaviours-exceptional'].length > 0 %}
+                <p>Exceptional actions:</p>
+                <ul class="list list-bullet">
+                  {% for thing in data['point' + point.number + '-teambehaviours-exceptional'] %}
+                    <li>{{ thing }}</li>
+                  {% endfor %}
+                </ul>
+              {% endif %}
 
-          </tbody>
-        </table>
+            </td>
+            <td>
+            </td>
+          </tr>
+          {% endif %}
 
-		{% endif %}
+          <tr>
+            <td>Recommendations</td>
+
+            <td>
+              <p>The project or programme must:</p>
+              <ul class="list list-bullet">
+                {% for behaviour in point.teambehaviours.expected %}
+                  {% if data['point' + point.number + '-teambehaviours-expected'] %}
+                    {% if not (behaviour.description in data['point' + point.number + '-teambehaviours-expected']) %}
+                      <li>{{ behaviour.recommendation | safe }}</li>
+                    {% endif %}
+                  {% else %}
+                    <li>{{ behaviour.recommendation | safe }}</li>
+                  {% endif %}
+                {% endfor %}
+              </ul>
+              <p>The project or programme should:</p>
+              <ul class="list list-bullet">
+                {% for behaviour in point.teambehaviours.strong %}
+                  {% if data['point' + point.number + '-teambehaviours-strong'] %}
+                    {% if not (behaviour.description in data['point' + point.number + '-teambehaviours-strong']) %}
+                      <li>{{ behaviour.recommendation | safe }}</li>
+                    {% endif %}
+                  {% else %}
+                    <li>{{ behaviour.recommendation | safe }}</li>
+                  {% endif %}
+                {% endfor %}
+              </ul>
+              <p>The project or programme could also:</p>
+              <ul class="list list-bullet">
+                {% for behaviour in point.teambehaviours.exceptional %}
+                  {% if data['point' + point.number + '-teambehaviours-exceptional'] %}
+                    {% if not (behaviour.description in data['point' + point.number + '-teambehaviours-exceptional']) %}
+                      <li>{{ behaviour.recommendation | safe }}</li>
+                    {% endif %}
+                  {% else %}
+                    <li>{{ behaviour.recommendation | safe }}</li>
+                  {% endif %}
+                {% endfor %}
+              </ul>
+            </td>
+          </tr>
+
+          {% if data['point' + point.number + '-other-behaviour-description'] %}
+          <tr>
+            <td>
+              Observations
+            </td>
+            <td>
+              <p class="font-xsmall">{{ data['point' + point.number + '-other-behaviour-description'] }}</p>
+            </td>
+            <td>
+            </td>
+          </tr>
+          {% endif %}
+
+          {% if data['point' + point.number + '-point-summary'] %}
+          <tr>
+            <td>
+              Overall
+            </td>
+            <td>
+              {{ data['point' + point.number + '-point-summary'] }}
+            </td>
+            <td></td>
+          </tr>
+          {% endif %}
+
+        </tbody>
+      </table>
+
+      {% endif %}
       {% endfor %}
 
       <h2 class="heading-medium">Now send your evaluation</h2>
@@ -108,8 +172,8 @@
 
       <div class="form-group">
         <label class="form-label" for="email">
-        Email address
-      </label>
+          Email address
+        </label>
         <input type="text" class="form-control" id="email">
 
         <label class="form-label" for="service-name">Service name (optional)</label>
@@ -127,6 +191,7 @@
         </p>
       </div>
     </div>
+
   </div>
 </main>
 

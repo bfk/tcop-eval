@@ -84,36 +84,42 @@
           {
             "id": "progressive-enhancement",
             "short-description": "Progressive enhancement",
-            "description": "The project or programme has created user interfaces that work well using standard HTML and CSS elements. They are making progress on adding advanced CSS or scripting functionality."
+            "description": "The project or programme has created user interfaces that work well using standard HTML and CSS elements. They are making progress on adding advanced CSS or scripting functionality.",
+            "recommendation": "Use progressive enhancement, which will make the service more accessible. <a href=\"https://www.gov.uk/service-manual/technology/using-progressive-enhancement\" title=\"Using progressive enhancement\">Read more about using progressive enhancement.</a>"
           },
           {
             "id": "accessibility-audit",
             "short-description": "Accessibility Audit",
-            "description": "The project or programme is using internal or external accessibility experts to evaluate the project or programme for any accessibility issues."
+            "description": "The project or programme is using internal or external accessibility experts to evaluate the project or programme for any accessibility issues.",
+            "recommendation": "Plan to get an accessibility audit, which will provide evidence at assessment that your service works with assistive technologies and meets <a href=\"https://www.gov.uk/service-manual/helping-people-to-use-your-service/understanding-wcag-20\">WCAG 2.0 level AA.</a> <a href=\"https://www.gov.uk/service-manual/technology/testing-for-accessibility#getting-an-accessibility-audit\">Read more about getting an accessibility audit.</a>"
           }
         ],
         "strong": [
           {
             "id": "act-on-accessibility",
             "short-description": "Accessibility impacts addressed",
-            "description": "The project or programme has acted to mitigate all high-impact and most medium-impact accessibility recommendations."
+            "description": "The project or programme has acted to mitigate all high-impact and most medium-impact accessibility recommendations.",
+            "recommendation": "Mitigate all high-impact and most medium-impact accessibility recommendations. <a href=\"https://www.gov.uk/service-manual/technology/testing-for-accessibility#using-audit-results-to-fix-problems\">Read more about using accessibility audit results to fix problems.</a>"
           },
           {
             "id": "accessibility-expertise",
             "short-description": "Accessibility expertise",
-            "description": "The project or programme contains at least one expert on accessibility issues, and all members have completed accessibility training."
+            "description": "The project or programme contains at least one expert on accessibility issues, and all members have completed accessibility training.",
+            "recommendation": "Hire or <a href=\"https://www.gov.uk/service-manual/the-team/working-contractors-third-parties\">contract</a> at least one expert on accessibility issues."
           }
         ],
         "exceptional": [
           {
             "id": "accessibility-user-panel",
             "short-description": "Accessibility user panel",
-            "description": "The project or programme regularly test the technology with a panel of users with accessibility needs."
+            "description": "The project or programme regularly test the technology with a panel of users with accessibility needs.",
+            "recommendation": "Regularly test the technology with a panel of users with accessibility needs. <a href=\"https://www.gov.uk/service-manual/user-research/running-research-sessions-with-people-with-disabilities\">Read more about running research sessions with people with disabilities.</a>"
           },
           {
             "id": "accessibility-standards",
             "short-description": "Sets accessibility standards",
-            "description": "The project or programme creates and talks about accessibility standards both in and outside the organisation. They participate in cross-government accessibility forums."
+            "description": "The project or programme creates and talks about accessibility standards both in and outside the organisation. They participate in cross-government accessibility forums.",
+            "recommendation": "Consider creating and talking about accessibility standards both in and outside the organisation. <a href=\"https://www.gov.uk/service-manual/communities/accessibility-community\">Read more about getting involved in the cross-government accessibility community.</a>"
           }
         ]
       }
