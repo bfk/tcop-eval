@@ -25,37 +25,44 @@
         "expected": [
           {
             "id": "individual-interviews",
-            "short-description": "The team conducts user interviews",
-            "description": "The project or programme conducts individual user interviews, as well as presentations or consultations with groups."
+            "short-description": "speaks to their users to find out what they need",
+            "description": "The project or programme conducts individual user interviews, as well as presentations or consultations with groups.",
+            "recommendation": "conducting research to discover who your users are and what they need from your project or programme. There is user research guidance in the service manual. Other help can be found in the technology guidance topics and by contacting [someone in user research?]"
           },
           {
             "id": "personas",
-            "short-description": "User personas",
-            "description": "The project or programme has identified users with different needs. They are grouped by goals or activities rather than demographics. User personas might be used to illustrate these different groups."
+            "short-description": "groups users by what they need rather than who they are",
+            "description": "The project or programme has identified users with different needs. They are grouped by goals or activities rather than demographics. User personas might be used to illustrate these different groups.",
+            "recommendation": "creating personas for your users and grouping them by their needs rather than who they are. There is user research guidance in the service manual. Other help can be found in the technology guidance topics and by contacting [someone in user research?]"
           }
         ],
         "strong": [
           {
             "id": "prioritized-backlog",
-            "short-description": "The team has a prioritised backlog",
-            "description": "The project or programme works from a prioritised backlog of user needs, written in the form of user stories."
+            "short-description": "prioritises work with the help of user stories",
+            "description": "The project or programme works from a prioritised backlog of user needs, written in the form of user stories.",
+            "recommendation": "creating personas for your users and grouping them by their needs rather than who they are. There is user research guidance in the service manual. Other help can be found in the technology guidance topics and by contacting [someone in user research?]"
           },
           {
             "id": "variety-research-methods",
-            "short-description": "The team uses a variety of research methods",
-            "description": "The project or programme has used a variety of user research methods, including ethnographic, one-to-one interviews and usability testing."
+            "short-description": "uses a variety of user research techniques",
+            "description": "The project or programme has used a variety of user research methods, including ethnographic, one-to-one interviews and usability testing.",
+            "recommendation": "using a variety of user research techniques to increase the type and amount of information received. There is user research guidance in the service manual. Other help can be found in the technology guidance topics and by contacting [someone in user research?])"
+
           }
         ],
         "exceptional": [
           {
             "id": "changed-requirements",
-            "short-description": "The team changes their requirements based on research",
-            "description": "The project or programme has changed its system requirements or scope due to insights from user research."
+            "short-description": "you use your user research to improve your work",
+            "description": "The project or programme has changed its system requirements or scope due to insights from user research.",
+            "recommendation": "using the user research to assess whether the scope or system requirements need to be redefined. There is user research guidance in the service manual. Other help can be found in the technology guidance topics and by contacting [someone in user research?])"
           },
           {
             "id": "shared-user-needs",
-            "short-description": "The team shares their discovered user needs widely",
-            "description": "The project or programme has contributed discovered user needs to help other programmes or departments."
+            "short-description": "shares research with other departments",
+            "description": "The project or programme has contributed discovered user needs to help other programmes or departments.",
+            "recommendation": "sharing your research with other programmes or departments. They will benefit and can also feedback with fresh insights. There is user research guidance in the service manual. Other help can be found in the technology guidance topics and by contacting [someone in user research?])"
           }
         ]
       }
@@ -83,43 +90,43 @@
         "expected": [
           {
             "id": "progressive-enhancement",
-            "short-description": "Progressive enhancement",
+            "short-description": "creates flexible and adaptable user interfaces using progressive enhancement",
             "description": "The project or programme has created user interfaces that work well using standard HTML and CSS elements. They are making progress on adding advanced CSS or scripting functionality.",
-            "recommendation": "Use progressive enhancement, which will make the service more accessible. <a href=\"https://www.gov.uk/service-manual/technology/using-progressive-enhancement\" title=\"Using progressive enhancement\">Read more about using progressive enhancement.</a>"
+            "recommendation": "using progressive enhancement to make the service more accessible. <a href=\"https://www.gov.uk/service-manual/technology/using-progressive-enhancement\" title=\"Using progressive enhancement\">Read more about using progressive enhancement.</a>"
           },
           {
             "id": "accessibility-audit",
-            "short-description": "Accessibility Audit",
+            "short-description": "uses accessibility experts",
             "description": "The project or programme is using internal or external accessibility experts to evaluate the project or programme for any accessibility issues.",
-            "recommendation": "Plan to get an accessibility audit, which will provide evidence at assessment that your service works with assistive technologies and meets <a href=\"https://www.gov.uk/service-manual/helping-people-to-use-your-service/understanding-wcag-20\">WCAG 2.0 level AA.</a> <a href=\"https://www.gov.uk/service-manual/technology/testing-for-accessibility#getting-an-accessibility-audit\">Read more about getting an accessibility audit.</a>"
+            "recommendation": "an accessibility audit to provide evidence for any assessments that your service works with assistive technologies and meets <a href=\"https://www.gov.uk/service-manual/helping-people-to-use-your-service/understanding-wcag-20\">WCAG 2.0 level AA.</a> <a href=\"https://www.gov.uk/service-manual/technology/testing-for-accessibility#getting-an-accessibility-audit\">Read more about getting an accessibility audit.</a>"
           }
         ],
         "strong": [
           {
             "id": "act-on-accessibility",
-            "short-description": "Accessibility impacts addressed",
+            "short-description": "acts upon accessibility recommendations",
             "description": "The project or programme has acted to mitigate all high-impact and most medium-impact accessibility recommendations.",
-            "recommendation": "Mitigate all high-impact and most medium-impact accessibility recommendations. <a href=\"https://www.gov.uk/service-manual/technology/testing-for-accessibility#using-audit-results-to-fix-problems\">Read more about using accessibility audit results to fix problems.</a>"
+            "recommendation": "mitigating all high-impact and most medium-impact accessibility issues. <a href=\"https://www.gov.uk/service-manual/technology/testing-for-accessibility#using-audit-results-to-fix-problems\">Read more about using accessibility audit results to fix problems.</a>"
           },
           {
             "id": "accessibility-expertise",
-            "short-description": "Accessibility expertise",
+            "short-description": "provides accessibility training",
             "description": "The project or programme contains at least one expert on accessibility issues, and all members have completed accessibility training.",
-            "recommendation": "Hire or <a href=\"https://www.gov.uk/service-manual/the-team/working-contractors-third-parties\">contract</a> at least one expert on accessibility issues."
+            "recommendation": "hiring at least one <a href=\"https://www.gov.uk/service-manual/the-team/working-contractors-third-parties\">contractor</a> or employing a staff member who is an expert on accessibility issues."
           }
         ],
         "exceptional": [
           {
             "id": "accessibility-user-panel",
-            "short-description": "Accessibility user panel",
+            "short-description": "tests with users with accessibility needs",
             "description": "The project or programme regularly test the technology with a panel of users with accessibility needs.",
-            "recommendation": "Regularly test the technology with a panel of users with accessibility needs. <a href=\"https://www.gov.uk/service-manual/user-research/running-research-sessions-with-people-with-disabilities\">Read more about running research sessions with people with disabilities.</a>"
+            "recommendation": "regularly testing the technology with a panel of users with accessibility needs. <a href=\"https://www.gov.uk/service-manual/user-research/running-research-sessions-with-people-with-disabilities\">Read more about running research sessions with people with disabilities.</a>"
           },
           {
             "id": "accessibility-standards",
-            "short-description": "Sets accessibility standards",
+            "short-description": "promotes accessibility standards",
             "description": "The project or programme creates and talks about accessibility standards both in and outside the organisation. They participate in cross-government accessibility forums.",
-            "recommendation": "Consider creating and talking about accessibility standards both in and outside the organisation. <a href=\"https://www.gov.uk/service-manual/communities/accessibility-community\">Read more about getting involved in the cross-government accessibility community.</a>"
+            "recommendation": "considering creating and talking about accessibility standards both in and outside the organisation. <a href=\"https://www.gov.uk/service-manual/communities/accessibility-community\">Read more about getting involved in the cross-government accessibility community.</a>"
           }
         ]
       }
@@ -152,37 +159,43 @@
         "expected": [
           {
             "id": "open-source-aware",
-            "short-description": "Aware of open source alternatives",
-            "description": "The project or programme does fair evaluations of open source options to see if there are any that meet the needs of the project or programme."
+            "short-description": "evaluates open source options",
+            "description": "The project or programme does fair evaluations of open source options to see if there are any that meet the needs of the project or programme.",
+            "recommendation": "evaluating open source options for some or all of its software. Some of the <a href=\"https://www.gov.uk/guidance/be-open-and-use-open-source#using-open-source\">questions to consider</a> when evaluating whether you want a proprietary or open source solution are in the Technology Code of Practice as well as some useful <a href=\"https://www.gov.uk/government/publications/technology-code-of-practice/technology-code-of-practice-related-guidance#open-source\">links about open source</a>."
           },
           {
             "id": "code-open-basic",
-            "short-description": "Code in an open repo",
-            "description": "The project or programme makes new code created by the programme available in an open repository."
+            "short-description": "publishes new code in an open repository",
+            "description": "The project or programme makes new code created by the programme available in an open repository.",
+            "recommendation": "making their source code open. There is <a href=\"https://www.gov.uk/government/publications/open-source-guidance\">open source guidance</a> on when to make your code open and the security considerations."
           }
         ],
         "strong": [
           {
             "id": "working-in-open",
-            "short-description": "Working in the open",
-            "description": "The project or programme maintains open code repositories by using commit histories, pull requests and clear documentation."
+            "short-description": "properly maintains their open repositories",
+            "description": "The project or programme maintains open code repositories by using commit histories, pull requests and clear documentation.",
+            "recommendation": "considering how they maintain their open code repositories. You can find guidance on <a href=\"https://www.gov.uk/service-manual/technology/making-source-code-open-and-reusable\">making source code open and reusable</a> in the Service Manual"
           },
           {
             "id": "skills-modify",
-            "short-description": "Skills to modify OSS",
-            "description": "The project or programme members have the skills and confidence to improve or adapt an open-source solution or platform."
+            "short-description": "has skilled and confident staff working with open source",
+            "description": "The project or programme members have the skills and confidence to improve or adapt an open-source solution or platform.",
+            "recommendation": "including staff training for using open source solutions and platforms."
           }
         ],
         "exceptional": [
           {
             "id": "cotributes-shared",
-            "short-description": "Contributes to shared platforms",
-            "description": "The project or programme contributes to shared platforms to help improve either their own systems so they are easier to use by others, or cross-government services."
+            "short-description": "shares its knowledge and experience with others",
+            "description": "The project or programme contributes to shared platforms to help improve either their own systems so they are easier to use by others, or cross-government services.",
+            "recommendation": "using their skills and experience to contribute to and improve shared platforms."
           },
           {
             "id": "docs-as-code",
-            "short-description": "Docs as code",
-            "description": "The project or programme publishes a complete set of documentation that is managed as code and kept in synch with the service code."
+            "short-description": "uses the proper technical documentation",
+            "description": "The project or programme publishes a complete set of documentation that is managed as code and kept in synch with the service code.",
+            "recommendation": "publishing their technical documentation and <a href=\"https://gdstechnology.blog.gov.uk/2017/08/25/why-we-use-a-docs-as-code-approach-for-technical-documentation/\">managing it as code</a> to keep it in sync with the service code. One way of doing this is by using the <a href=\"https://github.com/alphagov/tech-docs-template\">Tech-doc tool</a> used by GDS."
           }
         ]
       }
@@ -210,37 +223,43 @@
         "expected": [
           {
             "id": "using-mandatory-standards",
-            "short-description": "Using mandatory open standards",
-            "description": "The project or programme is using applicable open standards that are mandatory for government use."
+            "short-description": "uses the mandatory open standards",
+            "description": "The project or programme is using applicable open standards that are mandatory for government use.",
+            "recommendation": "using the mandatory open standards that apply. <a href=\"https://www.gov.uk/government/publications/open-standards-for-government\">The Open Standards for government</a> are published on GOV.UK."
           },
           {
             "id": "appropriate-open-standards",
-            "short-description": "Selects appropriate open standards to meet user needs",
-            "description": "The project or programme selects the open standards that meet their users’ needs and either implement them or lists them in the requirements to their supplier."
+            "short-description": "uses open standards that meet your requirements and user needs",
+            "description": "The project or programme selects the open standards that meet their users’ needs and either implement them or lists them in the requirements to their supplier.",
+            "recommendation": "using your user research during the open standards selection process or adding these needs on the requirement list for your chosen supplier. More information can be found in the <a href=\"https://www.gov.uk/government/publications/open-standards-principles/open-standards-principles#open-standards-must-meet-user-needs\">Open Standards principles</a>."
           }
         ],
         "strong": [
           {
             "id": "open-data",
-            "short-description": "Makes data as open as possible",
-            "description": "The project or programme uses open standards to make their data as open as possible."
+            "short-description": "makes your data open",
+            "description": "The project or programme uses open standards to make their data as open as possible.",
+            "recommendation": "using open standards that allows your data to be open and shareable. The <a href=\"https://www.gov.uk/government/publications/open-standards-for-government\">Open Standards for government</a> are published on GOV.UK."
           },
           {
             "id": "standards-futureproof",
-            "short-description": "Uses open standards to be compatible with future technology changes",
-            "description": "The project or programme uses open standards that are compatible with any future technology upgrades."
+            "short-description": "chooses open standards that allow you to upgrade your technology",
+            "description": "The project or programme uses open standards that are compatible with any future technology upgrades.",
+            "recommendation": "choosing open standards that are flexible and allow for future changes in technology. The <a href=\"https://www.gov.uk/government/publications/open-standards-for-government\">Open Standards for government</a> are published on GOV.UK."
           }
         ],
         "exceptional": [
           {
             "id": "promotes-standards",
-            "short-description": "Promotes open standards",
-            "description": "The project or programme promotes the use of open standards."
+            "short-description": "promotes the use of open standards",
+            "description": "The project or programme promotes the use of open standards.",
+            "recommendation": "promoting the use of open standards by <a href=\"https://www.gov.uk/government/collections/open-standards-for-government-data-and-technology\">getting involved in the open standards selection process</a>."
           },
           {
             "id": "contributes-standards",
-            "short-description": "Contributes to development of open standards",
-            "description": "The project or programme contributes to the development of open standards."
+            "short-description": "contributes to open standard development",
+            "description": "The project or programme contributes to the development of open standards.",
+            "recommendation": "contributing to the development of open standards by <a href=\"https://www.gov.uk/government/collections/open-standards-for-government-data-and-technology\">getting involved in the open standards selection process</a> or volunteering to be part of the <a href=\"https://www.gov.uk/government/groups/open-standards-board\">Open Standards Board</a>."
           }
         ]
       }
@@ -268,27 +287,31 @@
         "expected": [
           {
             "id": "cost-benefit",
-            "short-description": "cost benefit",
-            "description": "The project or programme can demonstrate that the alternative to the cloud they have selected offers better value for money."
+            "short-description": "has picked a cloud alternative that is good value",
+            "description": "The project or programme can demonstrate that the alternative to the cloud they have selected offers better value for money.",
+            "recommendation": "assessing and recording your conclusions on cloud hosting and its alternatives. There is guidance on <a href=\"https://www.gov.uk/guidance/how-to-assess-a-hosting-business-case\">how to assess a hosting business case.</a>"
           },
           {
             "id": "SasS-options",
-            "short-description": "Consider SaaS options",
-            "description": "The project or programme can show they have considered possible SaaS (software as a service) solutions before proposing bespoke developments."
+            "short-description": "has considered SaaS before bespoke services",
+            "description": "The project or programme can show they have considered possible SaaS (software as a service) solutions before proposing bespoke developments.",
+            "recommendation": "considering using SaaS instead of bespoke solutions. There is guidance on <a href=\"https://www.gov.uk/service-manual/technology/deciding-how-to-host-your-service\">deciding how to host your service</a>."
           }
         ],
         "strong": [
           {
             "id": "public-cloud",
-            "short-description": "Public cloud first",
-            "description": "The project or programme can demonstrate that they have evaluated GOV.UK PaaS as a potential provider in addition to other cloud providers."
+            "short-description": "has considered PaaS as well as other cloud services",
+            "description": "The project or programme can demonstrate that they have evaluated GOV.UK PaaS as a potential provider in addition to other cloud providers.",
+            "recommendation": "considering using government platforms as well as other cloud services. There is guidance on <a href=\"https://www.gov.uk/service-manual/technology/deciding-how-to-host-your-service\">deciding how to host your service</a>."
           }
         ],
         "exceptional": [
           {
             "id": "evolving technology",
-            "short-description": "Evolving cloud technologies",
-            "description": "The project or programme has made us of advances in cloud technology (for example, containerisation) to improve their solution."
+            "short-description": "uses advances in cloud technology",
+            "description": "The project or programme has made us of advances in cloud technology (for example, containerisation) to improve their solution.",
+            "recommendation": "considering all the cloud tools and components available to you rather than only considering the basic package. [potential links could be UK Digital Strategy, Transformation Strategy or <a href=\"https://dwpdigital.blog.gov.uk/2015/09/11/cloud-services-at-dwp/\">case studies such as the one published by DWP</a>."
           }
         ]
       }
@@ -312,37 +335,43 @@
         "expected": [
           {
             "id": "security-appropriate",
-            "short-description": "Appropriate level of security",
-            "description": "The project or programme can demonstrate how they are implementing the appropriate level of security."
+            "short-description": "uses the appropriate level of security",
+            "description": "The project or programme can demonstrate how they are implementing the appropriate level of security.",
+            "recommendation": "following the principles set out in the <a href=\"https://www.gov.uk/government/publications/security-policy-framework/hmg-security-policy-framework\">Security policy framework</a> and <a href=\"https://www.gov.uk/government/publications/government-security-classifications\">Security Classification Policy</a>"
           },
           {
             "id": "security-documented",
-            "short-description": "Well-documented security",
-            "description": "The project or programme provide well-documented security processes and make sure that all relevant staff members use them."
+            "short-description": "your security has well documented processes to follow",
+            "description": "The project or programme provide well-documented security processes and make sure that all relevant staff members use them.",
+            "recommendation": "documenting your security processes as suggested in the <a href=\"https://www.ncsc.gov.uk/guidance/b1-service-protection-policies-and-processes\">Service protection policies and processes</a> guidance by the National Cyber Security Centre (NCSC)"
           }
         ],
         "strong": [
           {
             "id": "security-mttr",
-            "short-description": "Improving Mean Time To Recovery",
-            "description": "The project or programme has processes in place to improve the mean time to recovery in addition to the regular processes."
+            "short-description": "improves your recovery processes",
+            "description": "The project or programme has processes in place to improve the mean time to recovery in addition to the regular processes.",
+            "recommendation": "improving your recovery processes by following the NCSC guidance on <a href=\"https://www.ncsc.gov.uk/guidance/d1-response-and-recovery-planning\">Response and recovery planning</a>"
           },
           {
             "id": "security-ncsc",
-            "short-description": "Follows NCSC guidance",
-            "description": "The project or programme can provide evidence of how they are following security guidance from the NCSC."
+            "short-description": "follows NCSC security guidance",
+            "description": "The project or programme can provide evidence of how they are following security guidance from the NCSC.",
+            "recommendation": "following NCSC security guidance such as the <a href=\"https://www.ncsc.gov.uk/guidance/nis-guidance-collection\">Network and Information Systems guidance collection</a>"
           }
         ],
         "exceptional": [
           {
             "id": "security-interactions",
-            "short-description": "Taken into account interactions with other systems",
-            "description": "The project or programme has taken into account interactions with other services and systems and where necessary made suggestions for improvements to the security interactions."
+            "short-description": "makes interactions with other systems secure as well",
+            "description": "The project or programme has taken into account interactions with other services and systems and where necessary made suggestions for improvements to the security interactions.",
+            "recommendation": "following the <a href=\"https://www.ncsc.gov.uk/guidance/10-steps-network-security\">NCSC guidance on network security</a> to help secure interactions with other systems"
           },
           {
             "id": "security-reusable",
-            "short-description": "Creating reusable security components",
-            "description": "The project or programme is using or has created, reusable security components."
+            "short-description": "uses a component-based approach to security risk management",
+            "description": "The project or programme is using or has created, reusable security components.",
+            "recommendation": "using a <a href=\"https://www.ncsc.gov.uk/guidance/introducing-component-driven-and-system-driven-risk-assessments\">component-based approach to security risk management</a>"
           }
         ]
       }
@@ -368,32 +397,37 @@
         "expected": [
           {
             "id": "privacy-gdpr",
-            "short-description": "Complies with the General Data Protection Regulation",
-            "description": "The project or programme must comply with the General Data Protection Regulation (GDPR)."
+            "short-description": "complies with the GDPR",
+            "description": "The project or programme must comply with the General Data Protection Regulation (GDPR).",
+            "recommendation": "complying with the <a href=\"https://ico.org.uk/for-organisations/guide-to-the-general-data-protection-regulation-gdpr\">GDPR</a>"
           },
           {
             "id": "privacy-clear",
-            "short-description": "Clear on how to collect, use and store personal data",
-            "description": "The project or programme must clear about how they will collect, use and store any personal data."
+            "short-description": "is clear about what you do with data",
+            "description": "The project or programme must clear about how they will collect, use and store any personal data.",
+            "recommendation": "writing a privacy notice that complies with the GDPR. The Information Commissioner's Office (ICO) provides guidance on <a href=\"https://ico.org.uk/for-organisations/guide-to-data-protection/privacy-notices-transparency-and-control/\">privacy notices, transparency and control</a>"
           }
         ],
         "strong": [
           {
             "id": "privacy-evaluatesgdpr",
-            "short-description": "Uses a variety of methods to evaluate compliance with General Data Protection Regulation (GDPR)",
-            "description": "The project or programme uses a variety of methods to evaluate their performance in complying with GDPR, such as user stories, information risk assessments and data protection impact assessments."
+            "short-description": "uses a variety of methods to assess their privacy compliance",
+            "description": "The project or programme uses a variety of methods to evaluate their performance in complying with GDPR, such as user stories, information risk assessments and data protection impact assessments.",
+            "recommendation": "using a variety of methods to assess your privacy compliance. The ICO provides guidance on <a href=\"https://ico.org.uk/for-organisations/guide-to-the-general-data-protection-regulation-gdpr/accountability-and-governance/\">accountability and governance</a> for GDPR"
           },
           {
             "id": "privacy-newtools",
-            "short-description": "Evaluates new tools to comply with GDPR",
-            "description": "The project or programme evaluates new technology tools to make sure they also comply with GDPR."
+            "short-description": "checks that new technology tools comply with GDPR",
+            "description": "The project or programme evaluates new technology tools to make sure they also comply with GDPR.",
+            "recommendation": "using <a href=\"https://ico.org.uk/for-organisations/guide-to-the-general-data-protection-regulation-gdpr/accountability-and-governance/data-protection-impact-assessments/\">data protection impact assessments</a> to check that new technology complies with GDPR"
           }
         ],
         "exceptional": [
           {
             "id": "privacy-teaches",
-            "short-description": "Teaches others about compliance with GDPR",
-            "description": "The project or programme use their experiences to teach other parts of the organisation about how to comply with GDPR."
+            "short-description": "helps others to comply with GDPR",
+            "description": "The project or programme use their experiences to teach other parts of the organisation about how to comply with GDPR.",
+            "recommendation": "discussing with your <a href=\"https://ico.org.uk/for-organisations/guide-to-the-general-data-protection-regulation-gdpr/accountability-and-governance/data-protection-officers/\">Data Protection Officer</a> how you can share your experiences with GDPR with other parts of the organisation"
           }
         ]
       }
@@ -417,37 +451,43 @@
         "expected": [
           {
             "id": "reuse-considered",
-            "short-description": "Considered elements for reuse",
-            "description": "The project or programme can show that they have considered if there are any elements they can reuse or share so that others can reuse."
+            "short-description": "considers what can be reused or shared",
+            "description": "The project or programme can show that they have considered if there are any elements they can reuse or share so that others can reuse.",
+            "recommendation": "considering if there are <a href=\"https://www.gov.uk/guidance/share-and-reuse-technology#how-you-can-share-and-reuse-technology\">technology elements you can share or reuse</a> to help with integration and costs"
           },
           {
             "id": "reuse-govplatforms",
-            "short-description": "Have considered common government platforms",
-            "description": "The project or programme can show they have considered using government platforms and common technology."
+            "short-description": "considers using government platforms and common technology",
+            "description": "The project or programme can show they have considered using government platforms and common technology.",
+            "recommendation": "considering using government common technology and platforms such as those associated with the <a href=\"https://www.gov.uk/government/policies/government-as-a-platform\">Government as a Platform (GaaP)</a> programme"
           }
         ],
         "strong": [
           {
             "id": "reuse-usinggovplatforms",
-            "short-description": "Using government platforms and common technology",
-            "description": "The project or programme is using government platforms and common technology."
+            "short-description": "makes your data available for use with APIs",
+            "description": "The project or programme is using government platforms and common technology.",
+            "recommendation": "making your data <a href=\"https://www.gov.uk/guidance/gds-api-technical-and-data-standards\">available for use with APIs</a> to help improve services for users"
           },
           {
             "id": "reuse-open",
-            "short-description": "Is open to allow for potential technology sharing",
-            "description": "The project or programme is as open as possible to allow for potential technology sharing."
+            "short-description": "increases technology sharing by joining one or more of the government technology communities",
+            "description": "The project or programme is as open as possible to allow for potential technology sharing.",
+            "recommendation": "joining one or more of the <a href=\"https://www.gov.uk/service-manual/communities\">government technology communities</a>"
           }
         ],
         "exceptional": [
           {
             "id": "reuse-promotes",
-            "short-description": "Promotes reusable elements",
-            "description": "The project or programme promotes the reusable elements to encourage other teams to share and reuse technology."
+            "short-description": "promotes the sharing and reusing of technology",
+            "description": "The project or programme promotes the reusable elements to encourage other teams to share and reuse technology.",
+            "recommendation": "promoting the sharing and reuse of technology either by blogging or other means"
           },
           {
             "id": "reuse-aggregatecrown",
-            "short-description": "Investigated commercial aggregation opportunities",
-            "description": "The project or programme has investigated commercial aggregation opportunities with the Crown Commercial Service."
+            "short-description": "investigates commercial aggregation opportunities",
+            "description": "The project or programme has investigated commercial aggregation opportunities with the Crown Commercial Service.",
+            "recommendation": "investigating what <a href=\"https://www.gov.uk/guidance/ccs-aggregation\">commercial aggregation opportunities</a> are available"
           }
         ]
       }
@@ -471,37 +511,43 @@
         "expected": [
           {
             "id": "integration-plans",
-            "short-description": "Has integration plans based on the IT operating model",
-            "description": "The project or programme has integration plans based on the organisation’s IT operating model, including business processes, governance, service support and service delivery."
+            "short-description": "has integration plans based ot the IT operating model",
+            "description": "The project or programme has integration plans based on the organisation’s IT operating model, including business processes, governance, service support and service delivery.",
+            "recommendation": "creating integration plans based ot the IT operating model"
           },
           {
             "id": "integration-flexible",
-            "short-description": "Flexible approach to integration",
-            "description": "The project or programme has a flexible approach to integration so that the system or service can incorporate legacy and new infrastructure, including the use of cloud services."
+            "short-description": "is flexible about how they integrate new technology",
+            "description": "The project or programme has a flexible approach to integration so that the system or service can incorporate legacy and new infrastructure, including the use of cloud services.",
+            "recommendation": "considering how you can be flexible when integrating new technology"
           }
         ],
         "strong": [
           {
             "id": "integration-skills",
-            "short-description": "Has a skills and capabilities training plan",
-            "description": "The project or programme has a skills and capabilities training plan."
+            "short-description": "has a skills and capabilities training plan",
+            "description": "The project or programme has a skills and capabilities training plan.",
+            "recommendation": "creating a skills and capabilities training plan based on guidance from the <a href=\"https://www.gov.uk/government/organisations/digital-data-and-technology-profession\">Digital, Data and Technology Profession</a>"
           },
           {
             "id": "integration-stress",
-            "short-description": "Runs regular integration and stress testing",
-            "description": "The project or programme regular integration and stress testing to make sure the system remains robust."
+            "short-description": "uses regular integration and stress testing",
+            "description": "The project or programme regular integration and stress testing to make sure the system remains robust.",
+            "recommendation": "using regular integration and stress testing"
           }
         ],
         "exceptional": [
           {
             "id": "integration-continuous",
-            "short-description": "Uses a continuous improvement model.",
-            "description": "The project or programme is using a continuous improvement model."
+            "short-description": "uses a continuous improvement model",
+            "description": "The project or programme is using a continuous improvement model.",
+            "recommendation": "using a continuous improvement model to reduce ‘technical debt’ and legacy technology"
           },
           {
             "id": "integration-interdependencies",
-            "short-description": "Tracks interdependencies between infrastructure and services",
-            "description": "The project or programme tracks the interdependencies between the infrastructure and the services running on it."
+            "short-description": "tracks the interdependencies between the infrastructure and the services",
+            "description": "The project or programme tracks the interdependencies between the infrastructure and the services running on it.",
+            "recommendation": "tracking the interdependencies between the infrastructure and the services"
           }
         ]
       }
@@ -527,32 +573,37 @@
         "expected": [
           {
             "id": "data-guidance",
-            "short-description": "Follows current guidance and best practices for data",
-            "description": "The project or programme follows the current guidance and best practices for managing data."
+            "short-description": "follows the current guidance and best practice for managing data",
+            "description": "The project or programme follows the current guidance and best practices for managing data.",
+            "recommendation": "following the current guidance and best practice for managing data such as the <a href=\"https://www.gov.uk/government/publications/government-transformation-strategy-2017-to-2020/government-transformation-strategy#make-better-use-of-data\">Government Transformation Strategy</a> and the <a href=\"https://www.gov.uk/government/publications/uk-digital-strategy/7-data-unlocking-the-power-of-data-in-the-uk-economy-and-improving-public-confidence-in-its-use\">UK Digital Strategy</a>"
           },
           {
             "id": "data-open",
-            "short-description": "Data is open by default and follows open data principles",
-            "description": "The project or programme makes their data <a href=\"https://www.gov.uk/government/publications/open-data-white-paper-unleashing-the-potential\">open by default</a> and follows the <a href=\"https://opendatacharter.net/\">open data principles</a> when publishing data."
+            "short-description": "you make data open and follow the open data principles",
+            "description": "The project or programme makes their data <a href=\"https://www.gov.uk/government/publications/open-data-white-paper-unleashing-the-potential\">open by default</a> and follows the <a href=\"https://opendatacharter.net/\">open data principles</a> when publishing data.",
+            "recommendation": "making your data open and follow the open data principles"
           }
         ],
         "strong": [
           {
             "id": "data-standards",
-            "short-description": "Uses common standards and platforms for data",
-            "description": "The project or programme uses common standards and platforms to make their data easier to analyse in a consistent way."
+            "short-description": "uses common standards and platforms to make your data easier to analyse",
+            "description": "The project or programme uses common standards and platforms to make their data easier to analyse in a consistent way.",
+            "recommendation": "using common standards and platforms to make your data easier to analyse"
           },
           {
             "id": "data-api",
-            "short-description": "Collection and storage of data is accessible by API",
-            "description": "The project or programme has a plan for the collection and storage of new data that makes it accessible for use by APIs."
+            "short-description": "makes sure APIs can access new data",
+            "description": "The project or programme has a plan for the collection and storage of new data that makes it accessible for use by APIs.",
+            "recommendation": "making sure APIs can access new data"
           }
         ],
         "exceptional": [
           {
             "id": "data-retention",
-            "short-description": "Has a strategy to retain data only as long as necessary",
-            "description": "The project or programme has a strategy for assessing the data they have and only keeping it for as long as necessary, and securely deleting the data when it’s no longer needed."
+            "short-description": "regularly assesses data and only keeps it while necessary",
+            "description": "The project or programme has a strategy for assessing the data they have and only keeping it for as long as necessary, and securely deleting the data when it’s no longer needed.",
+            "recommendation": "regularly assessing your data and only keeping it while necessary"
           }
         ]
       }
@@ -577,37 +628,43 @@
         "expected": [
           {
             "id": "",
-            "short-description": "",
-            "description": "The project or programme works closely with a commercial team to identify the best products and components to purchase."
+            "short-description": "works with the commercial team to identify the best products",
+            "description": "The project or programme works closely with a commercial team to identify the best products and components to purchase.",
+            "recommendation": "working with the commercial team to identify the best products"
           },
           {
             "id": "",
-            "short-description": "",
-            "description": "The project or programme uses off the shelf products and services where possible to avoid making customised products."
+            "short-description": "avoids bespoke technology where possible",
+            "description": "The project or programme uses off the shelf products and services where possible to avoid making customised products.",
+            "recommendation": "avoiding bespoke technology where possible"
           }
         ],
         "strong": [
           {
             "id": "",
-            "short-description": "",
-            "description": "The project or programme has a sourcing strategy that includes a plan for managing multiple suppliers."
+            "short-description": "plans how to manage multiple suppliers",
+            "description": "The project or programme has a sourcing strategy that includes a plan for managing multiple suppliers.",
+            "recommendation": "planning how to manage multiple suppliers"
           },
           {
             "id": "",
-            "short-description": "",
-            "description": "The project or programme has a plan that shows where and how they have disaggregated the technology they are using, and the contracts that supply the technology."
+            "short-description": "disaggregates your technology and contracts",
+            "description": "The project or programme has a plan that shows where and how they have disaggregated the technology they are using, and the contracts that supply the technology.",
+            "recommendation": "disaggregating your technology and contracts"
           }
         ],
         "exceptional": [
           {
             "id": "",
-            "short-description": "",
-            "description": "The project or programme regularly considers whether the requirements in their sourcing strategy can be simplified or broken up to allow for greater competition in the marketplace, including by small and medium-sized enterprises."
+            "short-description": "uses your sourcing strategy to encourage small and medium-sized enterprises",
+            "description": "The project or programme regularly considers whether the requirements in their sourcing strategy can be simplified or broken up to allow for greater competition in the marketplace, including by small and medium-sized enterprises.",
+            "recommendation": "using your sourcing strategy to encourage small and medium-sized enterprises"
           },
           {
             "id": "",
-            "short-description": "",
-            "description": "The project or programme uses technology components that complying with the <a href=\"https://www.gov.uk/government/collections/greening-government-commitments\">Greening Government Commitments</a> to reduce their environmental impact."
+            "short-description": "makes sure your technology is environmentally friendly",
+            "description": "The project or programme uses technology components that complying with the <a href=\"https://www.gov.uk/government/collections/greening-government-commitments\">Greening Government Commitments</a> to reduce their environmental impact.",
+            "recommendation": "making sure your technology is environmentally friendly"
           }
         ]
       }
@@ -615,6 +672,8 @@
     {
       "number": 12,
       "title": "Meet the Digital Service Standard for digital services",
+      "keyquestion": "How is your project or programme meeting the Digital Service Standard?",
+      "topic": "meeting the Digital Service Standard",
       "readmore": "https://www.gov.uk/service-manual/service-standard",
       "summary": "If you are building a service as part of your technology project or programme you will also need to meet the Digital Service Standard."
     }

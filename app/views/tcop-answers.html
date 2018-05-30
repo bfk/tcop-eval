@@ -6,29 +6,37 @@
       <a href="/start-page" class="link-back">Back to start</a>
 
       <h1 class="heading-large">
-        Evaluation Summary
+        Summary Report
       </h1>
 
       <div class="notice">
         <i class="icon icon-important"><span class="visually-hidden">Warning</span></i>
         <strong class="bold-small">
-          This service does not store any of your evaluation permanently. To keep the evaluation you need to download it. You can also send the evaluation by email.
+          Warning - This service does not permanently store your evaluation. To keep the evaluation you will need to download it. You can also send the evaluation by email.
         </strong>
       </div>
 
-      <h3 class="heading-medium">Project strengths</h3>
+      <br>
 
+      <p class="lede">This report comes in 2 sections. The first section summarises your project or programme’s main strengths. The second section makes recommendations on the potential actions you can take to improve your project or programme’s alignment with the Technology Code of Practice.</p>
+
+      <h3 class="heading-medium">Main strengths</h3>
+
+      <h4 class="heading-small">Your project or programme’s main strengths are:</h4>
       <ul class="list list-bullet">
-        <li>Point 1: Define user needs</li>
-        <li>Point 2: Make things accessible</li>
+        <li>1: Define user needs</li>
+        <li>2: Make things accessible</li>
       </ul>
 
-      <h3 class="heading-medium">Areas to explore</h3>
-
+      <h4 class="heading-small">Your project or programme:</h4>
       <ul class="list list-bullet">
-        <li>Point 3: Be open and use open source</li>
-        <li>Point 4: Make use of open standards</li>
+        <li>uses a variety of user research techniques</li>
+        <li>groups users by what they need rather than who they are</li>
+        <li>prioritises it’s work with the help of user stories</li>
+        <li>shares research with other departments</li>
       </ul>
+
+      <h3 class="heading-medium">Recommendations</h3>
 
       {% for point in config.tcop.points %}
       {% set behavioursDefined = (data['point' + point.number + '-teambehaviours-expected'].length > 0) or (data['point' + point.number + '-teambehaviours-strong'].length > 0) or (data['point' + point.number + '-teambehaviours-exceptional'].length > 0) %}
@@ -39,10 +47,11 @@
         <thead>
           <tr>
             <th colspan="2">
-              <h2 class="heading-medium">
-                {{ point.number }}. <a href="/point/{{ point.number }}" title="{{ point.title }}">{{ point.title }}</a></h4>
+              <h3 class="heading-small">
+                {{ point.number }}. <a href="/point/{{ point.number }}" title="{{ point.title }}">{{ point.title }}</a></h3>
               </h2>
               <p class="font-xsmall">{{ point.summary }}</p>
+              <p class="font-normal">The project or programme may benefit from:</p>
             </th>
             <th class="change-answer">
               <a href="/point/{{ point.number }}">
@@ -53,6 +62,7 @@
         </thead>
 
         <tbody>
+<!-- Comment for now - redoing the recommendations
           {% if behavioursDefined %}
           <tr>
             <td>
@@ -91,12 +101,11 @@
             </td>
           </tr>
           {% endif %}
+-->
 
           <tr>
-            <td>Recommendations</td>
-
+            <td>Expected actions</td>
             <td>
-              <p>The project or programme must:</p>
               <ul class="list list-bullet">
                 {% for behaviour in point.teambehaviours.expected %}
                   {% if data['point' + point.number + '-teambehaviours-expected'] %}
@@ -108,7 +117,10 @@
                   {% endif %}
                 {% endfor %}
               </ul>
-              <p>The project or programme should:</p>
+            </tr>
+            <tr>
+              <td>Strong actions</td>
+              <td>
               <ul class="list list-bullet">
                 {% for behaviour in point.teambehaviours.strong %}
                   {% if data['point' + point.number + '-teambehaviours-strong'] %}
@@ -120,7 +132,10 @@
                   {% endif %}
                 {% endfor %}
               </ul>
-              <p>The project or programme could also:</p>
+            </tr>
+            <tr>
+              <td>Exceptional actions</td>
+              <td>
               <ul class="list list-bullet">
                 {% for behaviour in point.teambehaviours.exceptional %}
                   {% if data['point' + point.number + '-teambehaviours-exceptional'] %}
@@ -137,26 +152,19 @@
 
           {% if data['point' + point.number + '-other-behaviour-description'] %}
           <tr>
+            <td>Observations</td>
             <td>
-              Observations
-            </td>
-            <td>
-              <p class="font-xsmall">{{ data['point' + point.number + '-other-behaviour-description'] }}</p>
-            </td>
-            <td>
+              <p>{{ data['point' + point.number + '-other-behaviour-description'] }}</p>
             </td>
           </tr>
           {% endif %}
 
           {% if data['point' + point.number + '-point-summary'] %}
           <tr>
-            <td>
-              Overall
-            </td>
+            <td>Progress summary</td>
             <td>
               {{ data['point' + point.number + '-point-summary'] }}
             </td>
-            <td></td>
           </tr>
           {% endif %}
 
@@ -166,7 +174,7 @@
       {% endif %}
       {% endfor %}
 
-      <h2 class="heading-medium">Now send your evaluation</h2>
+      <h2 class="heading-medium">Now send your summary report</h2>
 
       <!-- Email -->
 
@@ -183,11 +191,9 @@
 
 
       <div class="form-group">
-
-        <a href="confirmation-page" class="button">Send me a copy of my evaluation</a>
-
+        <a href="confirmation-page" class="button">Send me a copy of my summary report</a>
         <p class="body-text">
-          <a href="#">Download my evaluation as a PDF</a>
+          <a href="#">Download my summary report as a PDF</a>
         </p>
       </div>
     </div>

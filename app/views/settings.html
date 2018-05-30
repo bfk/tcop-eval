@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block page_title %}
-  Question page
+Question page
 {% endblock %}
 
 {% block content %}
@@ -12,95 +12,98 @@
 
       <a class="link-back" href="/docs/tutorials-and-examples">Back</a>
 
-      <form action="/start-page" method="post" class="form">
+      <form action="/point/1" method="post" class="form">
 
-      <h2 class="heading-medium">Configure this evaluation session</h2>
+<!-- Comment for now - may collect later
+        <h2 class="heading-medium">Configure this evaluation session</h2>
         <div class="form-group">
-        <label class="form-label" for="email">Email address</label>
-        <input type="text" class="form-control" id="email" name="email" value="{{ data['email'] }}">
-        <label class="form-label" for="service-name">Service name (optional)</label>
-        <input class="form-control" id="service-name" type="text" name="service-name" value="{{ data['service-name'] }}">
-      </div>
-
-        <div class="form-group">
-          <fieldset>
-            <legend>
-              <h3§ class="heading-medium">
-                What points would you like to evaluate?
-              </h3>
-            </legend>
-
-            {% for point in config.tcop.points %}
-            <div class="multiple-choice">
-              <input id="session-points-{{point.number}}" name="session-points" type="checkbox" value="{{point.number}}" {{ checked("session-points", point.number) }}>
-              <label for="session-points-{{point.number}}">Point {{point.number}}: {{point.title}}</label>
-            </div>
-            {% endfor %}
-
-          </fieldset>
+          <label class="form-label" for="email">Email address</label>
+          <input type="text" class="form-control" id="email" name="email" value="{{ data['email'] }}">
+          <label class="form-label" for="service-name">Service name (optional)</label>
+          <input class="form-control" id="service-name" type="text" name="service-name" value="{{ data['service-name'] }}">
         </div>
+-->
 
         <div class="form-group">
           <fieldset>
             <legend>
               <h3 class="heading-medium">
-                Are you interested in team behaviours or programme behaviours?
-              </h3>
-              <span class="body-text">Select all that apply<br />(If you select neither you will record a general evaluation only)</span>
-            </legend>
+              Select the relevant topics
+            </h3>
+            <p>Choose the topics from the Technology Code of Practice that you want to use to evaluate your project or programme.</p>
+            <h4 class="heading-small">Select the topics you want to evaluate.</h4>
+          </legend>
 
-            <div class="multiple-choice">
-              <input id="session-team" name="session-team" type="checkbox" value="session-team" checked>
-              <label for="session-team">Team Behaviours</label>
-            </div>
-            <div class="multiple-choice">
-              <input id="session-programme" name="session-programme" type="checkbox" value="session-team" checked>
-              <label for="session-programme">Programme Behaviours</label>
-            </div>
-          </fieldset>
-        </div>
+          {% for point in config.tcop.points %}
+          <div class="multiple-choice">
+            <input id="session-points-{{point.number}}" name="session-points" type="checkbox" value="{{point.number}}" {{ checked(data['session-points'] and point.number in data['session-points']) }}>
+            <label for="session-points-{{point.number}}">Point {{point.number}}: {{point.title}}</label>
+          </div>
+          {% endfor %}
 
-        <div class="form-group">
-          <fieldset>
-            <legend>
-              <h3 class="heading-medium">
-                Would you like to include an overall evaluation for each point?
-              </h3>
-              <span class="body-text">If checked, you will prompted to evaluate each point as <em>All Fine</em>, <em>Some Issues</em> or <em>Tricky Issues</em></span>
-            </legend>
-
-            <div class="multiple-choice">
-              <input id="session-overall" name="session-overall" type="checkbox" value="session-overall" checked>
-              <label for="session-overall">Include overall evaluation</label>
-            </div>
-          </fieldset>
-        </div>
-
-
-	<div class="form-group">
-
-        <a href="/point/1" class="button">Continue with evaluation</a>
-
+        </fieldset>
       </div>
 
-        <p class="body-text">
-          <a href="#">Copy a link to this evaluation</a>
-        </p>
+<!-- Comment for now - may collect later
+      <div class="form-group">
+        <fieldset>
+          <legend>
+            <h3 class="heading-medium">
+              Are you interested in team behaviours or programme behaviours?
+            </h3>
+            <span class="body-text">Select all that apply<br />(If you select neither you will record a general evaluation only)</span>
+          </legend>
 
-	</form>
+          <div class="multiple-choice">
+            <input id="session-team" name="session-team" type="checkbox" value="session-team" checked>
+            <label for="session-team">Team Behaviours</label>
+          </div>
+          <div class="multiple-choice">
+            <input id="session-programme" name="session-programme" type="checkbox" value="session-team" checked>
+            <label for="session-programme">Programme Behaviours</label>
+          </div>
+        </fieldset>
+      </div>
 
-	<!--
-	<pre>
-	<div class="code">
-		session-points: {{ data['session-points'] }}
-		email: {{ data['email'] }}
-		service-name: {{ data['service-name'] }}
-	</div>
-	</pre>
-	-->
+      <div class="form-group">
+        <fieldset>
+          <legend>
+            <h3 class="heading-medium">
+              Would you like to include an overall evaluation for each point?
+            </h3>
+            <span class="body-text">If checked, you will prompted to evaluate each point as <em>All Fine</em>, <em>Some Issues</em> or <em>Tricky Issues</em></span>
+          </legend>
 
-    </div>
+          <div class="multiple-choice">
+            <input id="session-overall" name="session-overall" type="checkbox" value="session-overall" checked>
+            <label for="session-overall">Include overall evaluation</label>
+          </div>
+        </fieldset>
+      </div>
+-->
+
+      <div class="form-group">
+        <input class="button" type="submit" value="Go to the questions">
+      </div>
+
+      <p class="body-text">
+        <a href="#">Copy a link to this evaluation</a>
+      </p>
+
+    </form>
+
+<!-- Comment - debugging information
+    <pre>
+      <div class="code">
+        session-points: {{ data['session-points'] }}
+        email: {{ data['email'] }}
+        service-name: {{ data['service-name'] }}
+      </div>
+    </pre>
+-->
+
   </div>
+</div>
 </main>
 
 {% endblock %}
