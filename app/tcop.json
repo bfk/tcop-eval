@@ -32,7 +32,7 @@
           {
             "id": "personas",
             "short-description": "groups users by what they need rather than who they are",
-            "description": "The project or programme has identified users with different needs. They are grouped by goals or activities rather than demographics. User personas might be used to illustrate these different groups.",
+            "description": "The project or programme has identified users with many different needs. They are grouped by goals or activities rather than demographics. User personas might be used to illustrate these different groups.",
             "recommendation": "creating personas for your users and grouping them by their needs rather than who they are. There is user research guidance in the service manual. Other help can be found in the technology guidance topics and by contacting [someone in user research?]"
           }
         ],
