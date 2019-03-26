@@ -11,7 +11,7 @@
       "summary": "Understand your users and their needs. Develop knowledge of your users and what that means for your technology project or programme.",
       "prompts": [
         "Have you carried out user research in the form of multiple interviews or observations of the users?",
-        "Do you have a thorough knowledge of who your users are?",
+        "Do you have a very thorough knowledge of who your users are?",
         "Does your evidence support your understanding of your users’ needs?",
         "Can you describe how your service/product reflects the needs of the user?"
       ],
@@ -32,7 +32,7 @@
           {
             "id": "personas",
             "short-description": "groups users by what they need rather than who they are",
-            "description": "The project or programme has identified users with different needs. They are grouped by goals or activities rather than demographics. User personas might be used to illustrate these different groups.",
+            "description": "The project or programme has identified users with many different needs. They are grouped by goals or activities rather than demographics. User personas might be used to illustrate these different groups.",
             "recommendation": "creating personas for your users and grouping them by their needs rather than who they are. There is user research guidance in the service manual. Other help can be found in the technology guidance topics and by contacting [someone in user research?]"
           }
         ],
